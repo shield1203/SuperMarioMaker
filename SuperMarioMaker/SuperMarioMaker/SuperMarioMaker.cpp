@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "MainSystem.h"
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
@@ -8,13 +8,13 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 {
 	MainSystem* pMainSystem = new MainSystem();
 
-	if (pMainSystem->Initialize())
+	if (pMainSystem->InitializeMainSystem())
 	{
-		pMainSystem->Process();
+		pMainSystem->Run();
 	}
 
-	pMainSystem->Release();
-	
+	pMainSystem->Shutdown();
+
 	SafeDelete(pMainSystem);
 
 	return 0;

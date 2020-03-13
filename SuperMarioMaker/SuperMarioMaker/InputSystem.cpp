@@ -19,6 +19,7 @@ InputSystem::InputSystem()
 
 InputSystem::~InputSystem()
 {
+	Inst = nullptr;
 }
 
 

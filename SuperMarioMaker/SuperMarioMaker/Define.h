@@ -1,5 +1,9 @@
 #pragma once
 
+#define WIN_SIZE_WIDTH 800
+#define WIN_SIZE_HEIGHT 600
+#define SERVER_IP "203.232.193.170"
+
 /////////////
 // LINKING //
 /////////////
@@ -17,7 +21,6 @@
 #include <d3d11_1.h>
 #include <d3dcompiler.h>
 #include <directxmath.h>
-#include "DDSTextureLoader.h"	// DDS 파일 처리
 using namespace DirectX;
 
 //////////////

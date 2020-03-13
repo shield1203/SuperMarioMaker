@@ -13,5 +13,133 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\00.Define">
+      <UniqueIdentifier>{8bd11d6e-9892-4ae6-b28d-a9748b0a474a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.GameStart">
+      <UniqueIdentifier>{09a1b0f2-91b5-40c0-93f8-1d85fed1ce92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.MainSystem">
+      <UniqueIdentifier>{f5177e73-bc36-48b9-8c66-390cf1fe836d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems">
+      <UniqueIdentifier>{a5d18a62-804d-4cfd-ac99-6a1328d6df7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty">
+      <UniqueIdentifier>{2eb8cff7-de27-44be-bc77-b0f15b53265d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\00.SoundSystem">
+      <UniqueIdentifier>{8d62a659-71b6-4e1d-b513-ed3ec083c1ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\01.InputSystem">
+      <UniqueIdentifier>{7aa46ce2-24a6-4d4d-8e0e-c514eb67a61f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\02.ResourceManager">
+      <UniqueIdentifier>{42a1259d-cf83-4174-87f0-c63cbab4f514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class">
+      <UniqueIdentifier>{df43df1e-65e9-4b4c-a778-9495e6b47c93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\00.D3DClass">
+      <UniqueIdentifier>{a8798f23-6895-498e-b701-9e23445c3d5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\01.CameraClass">
+      <UniqueIdentifier>{72bb9f00-d9be-4f8b-9f63-6f4de213df34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\02.BitmapClass">
+      <UniqueIdentifier>{670c2057-7117-4985-99ac-2f4d6011bca0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperMarioMaker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>소스 파일\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="DefineFunction.h">
+      <Filter>소스 파일\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="MainSystem.h">
+      <Filter>소스 파일\02.MainSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignedAllocationPolicy.h">
+      <Filter>소스 파일\03.DirectX11Class</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsClass.h">
+      <Filter>소스 파일\03.DirectX11Class</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem.h">
+      <Filter>소스 파일\05.Utilty\01.InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DefineEnum.h">
+      <Filter>소스 파일\00.Define</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>소스 파일\05.Utilty\02.ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DClass.h">
+      <Filter>소스 파일\03.DirectX11Class\00.D3DClass</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraClass.h">
+      <Filter>소스 파일\03.DirectX11Class\01.CameraClass</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapClass.h">
+      <Filter>소스 파일\03.DirectX11Class\02.BitmapClass</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainSystem.cpp">
+      <Filter>소스 파일\02.MainSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>소스 파일\05.Utilty\01.InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>헤더 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperMarioMaker.cpp">
+      <Filter>소스 파일\01.GameStart</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>소스 파일\05.Utilty\02.ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\00.D3DClass</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\01.CameraClass</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\02.BitmapClass</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SuperMarioMaker.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="SuperMarioMaker.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Icon.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -2,14 +2,18 @@
 
 #define _WIN32_WINNT 0x0600
 #define MAX_LOADSTRING 100
+#define MAX_TEXT 20
 
 #include "targetver.h"
 
 #define WIN32_LEAN_AND_MEAN         
 // Windows 헤더 파일:
+#include <WinSock2.h>
+#include <ws2tcpip.h>
 #include <windows.h>
 
 // C 런타임 헤더 파일입니다.
+#include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
 #include <malloc.h>

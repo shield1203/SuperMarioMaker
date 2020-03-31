@@ -43,11 +43,77 @@
     <Filter Include="소스 파일\03.DirectX11Class\00.D3DClass">
       <UniqueIdentifier>{a8798f23-6895-498e-b701-9e23445c3d5a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\03.DirectX11Class\01.CameraClass">
+    <Filter Include="소스 파일\03.DirectX11Class\01.Camera">
       <UniqueIdentifier>{72bb9f00-d9be-4f8b-9f63-6f4de213df34}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\03.DirectX11Class\02.BitmapClass">
+    <Filter Include="소스 파일\03.DirectX11Class\02.Bitmap">
       <UniqueIdentifier>{670c2057-7117-4985-99ac-2f4d6011bca0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\02.Bitmap\00.Texture">
+      <UniqueIdentifier>{ec537c87-d324-4ee1-946f-f74d4e07d89e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\00.Frame">
+      <UniqueIdentifier>{100bd464-fcb1-48e6-9c6d-9ea347b3244c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\02.Bitmap\01.TextureLoader">
+      <UniqueIdentifier>{3dcefaf4-ce1c-40b8-accf-537deada70d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\xmlParser">
+      <UniqueIdentifier>{cc85a549-a384-4aed-937c-b73de85c7b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\02.ResourceManager\00.Player">
+      <UniqueIdentifier>{a7a538cd-1c2d-456e-a25e-57306d66c982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\happyhttp">
+      <UniqueIdentifier>{1014d3d4-f198-438b-96d9-392c0205b863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\02.TitleSystem">
+      <UniqueIdentifier>{8eef789f-4132-4cab-808e-0bfdb18b91a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\02.TitleSystem\00.TitleCursor">
+      <UniqueIdentifier>{cd33510c-b18d-4bce-a11b-67ce39a471b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\03.MakerSystem">
+      <UniqueIdentifier>{727c7474-585c-467d-b6b7-e31b8c788552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\04.SinglePlaySystem">
+      <UniqueIdentifier>{575529d5-7e5e-4a73-a5ff-234a053ff330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\01.LoginSystem">
+      <UniqueIdentifier>{1d3d6122-dd39-42db-bf65-0c48533f7a7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\01.LoginSystem\00.LoginCursor">
+      <UniqueIdentifier>{b27930f4-cc45-4ea4-8b84-d45a7d822643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\04.HttpSystem">
+      <UniqueIdentifier>{6c08ba47-2050-4dd9-887f-6323b0c07209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\03.TextManager">
+      <UniqueIdentifier>{91491900-1c4c-47ec-a92e-3bd388465e6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\04.Shader">
+      <UniqueIdentifier>{be642434-baf5-4f24-aebc-6cc653d5335f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\04.Shader\00.Texture">
+      <UniqueIdentifier>{2713d8cd-b0ce-48ff-93cb-9e79cc66245e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\04.Shader\01.Transparent">
+      <UniqueIdentifier>{f10c6245-c708-4bad-97fe-a0ea28b47977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\03.Text">
+      <UniqueIdentifier>{cdfcf342-e1ca-48d3-b24a-c13107c76a55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\04.Shader\02.Font">
+      <UniqueIdentifier>{cd557293-6f26-4b1f-b185-2c868bcae591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\03.Text\00.Font">
+      <UniqueIdentifier>{8281f3e6-2682-4be0-933b-ee4308651f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.DirectX11Class\03.Text\01.TextureLoader">
+      <UniqueIdentifier>{951ea470-ee37-4909-9920-80f308658e62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\01.LoginSystem\01.NIcknameTextBox">
+      <UniqueIdentifier>{773965f1-2de5-4b90-91b3-6fc62d69fa0d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -91,10 +157,73 @@
       <Filter>소스 파일\03.DirectX11Class\00.D3DClass</Filter>
     </ClInclude>
     <ClInclude Include="CameraClass.h">
-      <Filter>소스 파일\03.DirectX11Class\01.CameraClass</Filter>
+      <Filter>소스 파일\03.DirectX11Class\01.Camera</Filter>
     </ClInclude>
     <ClInclude Include="BitmapClass.h">
-      <Filter>소스 파일\03.DirectX11Class\02.BitmapClass</Filter>
+      <Filter>소스 파일\03.DirectX11Class\02.Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="TransparentShaderClass.h">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\01.Transparent</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureShaderClass.h">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\00.Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureClass.h">
+      <Filter>소스 파일\03.DirectX11Class\02.Bitmap\00.Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemFrame.h">
+      <Filter>소스 파일\04.Systems\00.Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleSystem.h">
+      <Filter>소스 파일\04.Systems\02.TitleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="WICTextureLoader.h">
+      <Filter>소스 파일\03.DirectX11Class\02.Bitmap\01.TextureLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>헤더 파일\xmlParser</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>헤더 파일\xmlParser</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleCursor.h">
+      <Filter>소스 파일\04.Systems\02.TitleSystem\00.TitleCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\05.Utilty\02.ResourceManager\00.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglePlaySystem.h">
+      <Filter>소스 파일\04.Systems\04.SinglePlaySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="happyhttp.h">
+      <Filter>헤더 파일\happyhttp</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginSystem.h">
+      <Filter>소스 파일\04.Systems\01.LoginSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginCursor.h">
+      <Filter>소스 파일\04.Systems\01.LoginSystem\00.LoginCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>소스 파일\05.Utilty\03.TextManager</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpSystem.h">
+      <Filter>소스 파일\05.Utilty\04.HttpSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FontShaderClass.h">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\02.Font</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>소스 파일\03.DirectX11Class\03.Text\01.TextureLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="FontClass.h">
+      <Filter>소스 파일\03.DirectX11Class\03.Text\00.Font</Filter>
+    </ClInclude>
+    <ClInclude Include="TextClass.h">
+      <Filter>소스 파일\03.DirectX11Class\03.Text</Filter>
+    </ClInclude>
+    <ClInclude Include="NicknameTextBox.h">
+      <Filter>소스 파일\04.Systems\01.LoginSystem\01.NIcknameTextBox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -120,10 +249,79 @@
       <Filter>소스 파일\03.DirectX11Class\00.D3DClass</Filter>
     </ClCompile>
     <ClCompile Include="CameraClass.cpp">
-      <Filter>소스 파일\03.DirectX11Class\01.CameraClass</Filter>
+      <Filter>소스 파일\03.DirectX11Class\01.Camera</Filter>
     </ClCompile>
     <ClCompile Include="BitmapClass.cpp">
-      <Filter>소스 파일\03.DirectX11Class\02.BitmapClass</Filter>
+      <Filter>소스 파일\03.DirectX11Class\02.Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="TransparentShaderClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\01.Transparent</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureShaderClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\00.Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\02.Bitmap\00.Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemFrame.cpp">
+      <Filter>소스 파일\04.Systems\00.Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleSystem.cpp">
+      <Filter>소스 파일\04.Systems\02.TitleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="WICTextureLoader.cpp">
+      <Filter>소스 파일\03.DirectX11Class\02.Bitmap\01.TextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>헤더 파일\xmlParser</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>헤더 파일\xmlParser</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>헤더 파일\xmlParser</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>헤더 파일\xmlParser</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleCursor.cpp">
+      <Filter>소스 파일\04.Systems\02.TitleSystem\00.TitleCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\05.Utilty\02.ResourceManager\00.Player</Filter>
+    </ClCompile>
+    <ClCompile Include="SinglePlaySystem.cpp">
+      <Filter>소스 파일\04.Systems\04.SinglePlaySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="happyhttp.cpp">
+      <Filter>헤더 파일\happyhttp</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginSystem.cpp">
+      <Filter>소스 파일\04.Systems\01.LoginSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginCursor.cpp">
+      <Filter>소스 파일\04.Systems\01.LoginSystem\00.LoginCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="TextManager.cpp">
+      <Filter>소스 파일\05.Utilty\03.TextManager</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpSystem.cpp">
+      <Filter>소스 파일\05.Utilty\04.HttpSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FontShaderClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\02.Font</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>소스 파일\03.DirectX11Class\03.Text\01.TextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="FontClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\03.Text\00.Font</Filter>
+    </ClCompile>
+    <ClCompile Include="TextClass.cpp">
+      <Filter>소스 파일\03.DirectX11Class\03.Text</Filter>
+    </ClCompile>
+    <ClCompile Include="NicknameTextBox.cpp">
+      <Filter>소스 파일\04.Systems\01.LoginSystem\01.NIcknameTextBox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -141,5 +339,25 @@
     <Image Include="Icon.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="texture.ps">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\00.Texture</Filter>
+    </None>
+    <None Include="texture.vs">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\00.Texture</Filter>
+    </None>
+    <None Include="transparent.ps">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\01.Transparent</Filter>
+    </None>
+    <None Include="transparent.vs">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\01.Transparent</Filter>
+    </None>
+    <None Include="font.ps">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\02.Font</Filter>
+    </None>
+    <None Include="font.vs">
+      <Filter>소스 파일\03.DirectX11Class\04.Shader\02.Font</Filter>
+    </None>
   </ItemGroup>
 </Project>

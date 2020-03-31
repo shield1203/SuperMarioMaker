@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<Resource>
+  <Cursor>
+    <ImagePath width ="26" height ="27" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/cursor.png</ImagePath>
+  </Cursor>
+  
+  <Player>
+    <Type characterType ="Mario">
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L00.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R00.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L01.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R01.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L02.png</ImagePath>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L03.png</ImagePath>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L04.png</ImagePath>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L05.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R02.png</ImagePath>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R03.png</ImagePath>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R04.png</ImagePath>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R05.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L06.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R06.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L07.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R07.png</ImagePath>
+      </SpriteData>
+    </Type>
+  </Player>
+
+  <LoginSystem>
+    <BackgroundData>
+      <ImagePath width ="1100" height ="700">Texture/Login/background.png</ImagePath>
+    </BackgroundData>
+    <ButtonData xPos ="690" yPos ="315">
+      <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/create_id_on.png</ImagePath>
+      <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/create_id_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="690" yPos ="315">
+      <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/game_start_on.png</ImagePath>
+      <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/game_start_off.png</ImagePath>
+    </ButtonData>
+  </LoginSystem>
+    
+  <TitleSystem>
+    <BackgroundData>
+      <ImagePath width ="1100" height ="700">Texture/Title/background.png</ImagePath>
+    </BackgroundData>
+    <ButtonData xPos ="765" yPos ="130">
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/create_map_on.png</ImagePath>
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/create_map_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="765" yPos ="230">
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/single_play_on.png</ImagePath>
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/single_play_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="765" yPos ="330">
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/multiplay_on.png</ImagePath>
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/multiplay_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="765" yPos ="430">
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/upload_map_on.png</ImagePath>
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/upload_map_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="765" yPos ="530">
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/download_map_on.png</ImagePath>
+      <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/download_map_off.png</ImagePath>
+    </ButtonData>
+  </TitleSystem>
+</Resource>

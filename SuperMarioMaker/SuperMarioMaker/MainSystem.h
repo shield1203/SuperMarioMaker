@@ -4,6 +4,7 @@ class GraphicsClass;
 class SystemFrame;
 class InputSystem;
 class ResourceManager;
+class TextManager;
 
 class MainSystem
 {
@@ -14,6 +15,7 @@ private:
 	SystemFrame* m_systemFrame = nullptr;
 	InputSystem* m_inputSystem = nullptr;
 	ResourceManager* m_resourceManager = nullptr;
+	TextManager* m_textManager = nullptr;
 
 	LPCWSTR m_applicationName;
 	HINSTANCE m_hinstance;
@@ -31,7 +33,7 @@ public:
 
 	void Initialize();
 	void Update();
-	void Render();
+	bool Render();
 
 	void InitializeWindows(int&, int&);
 	void ShutdownWindows();

@@ -18,7 +18,7 @@ BitmapClass::~BitmapClass()
 }
 
 
-bool BitmapClass::Initialize(ID3D11Device* device, ID3D11DeviceContext* deviceContext, int screenWidth, int screenHeight, char* textureFilename, int bitmapWidth, int bitmapHeight)
+bool BitmapClass::Initialize(ID3D11Device* device, int screenWidth, int screenHeight, WCHAR* textureFilename, int bitmapWidth, int bitmapHeight, RECT collision, unsigned int time)
 {
 	// 화면 크기를 멤버변수에 저장
 	m_screenWidth = screenWidth;
@@ -32,6 +32,13 @@ bool BitmapClass::Initialize(ID3D11Device* device, ID3D11DeviceContext* deviceCo
 	m_previousPosX = -1;
 	m_previousPosY = -1;
 
+	m_collision.left = collision.left;
+	m_collision.right = collision.right;
+	m_collision.top = collision.top;
+	m_collision.bottom = collision.bottom;
+
+	m_time = time;
+
 	// 정점 및 인덱스 버퍼를 초기화합니다.
 	if (!InitializeBuffers(device))
 	{
@@ -39,7 +46,7 @@ bool BitmapClass::Initialize(ID3D11Device* device, ID3D11DeviceContext* deviceCo
 	}
 
 	// 이 모델의 텍스처를 로드합니다.
-	return LoadTexture(device, deviceContext, textureFilename);
+	return LoadTexture(device, textureFilename);
 }
 
 
@@ -278,7 +285,7 @@ void BitmapClass::RenderBuffers(ID3D11DeviceContext* deviceContext)
 }
 
 
-bool BitmapClass::LoadTexture(ID3D11Device* device, ID3D11DeviceContext* deviceContext, char* filename)
+bool BitmapClass::LoadTexture(ID3D11Device* device, WCHAR* filename)
 {
 	// 텍스처 오브젝트를 생성한다.
 	m_Texture = new TextureClass;
@@ -288,7 +295,7 @@ bool BitmapClass::LoadTexture(ID3D11Device* device, ID3D11DeviceContext* deviceC
 	}
 
 	// 텍스처 오브젝트를 초기화한다.
-	return m_Texture->Initialize(device, deviceContext, filename);
+	return m_Texture->Initialize(device, filename);
 }
 
 
@@ -301,4 +308,17 @@ void BitmapClass::ReleaseTexture()
 		delete m_Texture;
 		m_Texture = 0;
 	}
+}
+
+void BitmapClass::GetCollisionRECT(RECT& collision)
+{
+	collision.left = m_collision.left;
+	collision.right = m_collision.right;
+	collision.top = m_collision.top;
+	collision.bottom = m_collision.bottom;
+}
+
+void BitmapClass::GetAniTime(unsigned int& aniTime)
+{
+	aniTime = m_time;
 }

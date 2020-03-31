@@ -2,10 +2,13 @@
 #include "d3dclass.h"
 #include "cameraclass.h"
 #include "textureshaderclass.h"
-#include "transparentshaderclass.h"
-#include "graphicsclass.h"
+#include "TransparentShaderClass.h"
+#include "BitmapClass.h"
+#include "TextManager.h"
+#include "TextClass.h"
+#include "Graphicsclass.h"
 #include "SystemFrame.h"
-
+#include "ResourceManager.h"
 
 GraphicsClass::GraphicsClass()
 {
@@ -45,17 +48,23 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 		return false;
 	}
 
-	// 텍스처 쉐이더 객체를 생성한다.
+	// 카메라 포지션 설정
+	XMMATRIX baseViewMatrix;
+	m_Camera->SetPosition(0.0f, 0.0f, -6.0f);
+	m_Camera->Render();
+	m_Camera->GetViewMatrix(baseViewMatrix);
+
+	// m_TextureShader 객체 생성
 	m_TextureShader = new TextureShaderClass;
 	if (!m_TextureShader)
 	{
 		return false;
 	}
 
-	// 텍스처 쉐이더 객체를 초기화한다.
+	// m_TextureShader 객체 초기화
 	if (!m_TextureShader->Initialize(m_Direct3D->GetDevice(), hwnd))
 	{
-		MessageBox(hwnd, L"Could not initialize the texture shader object.", L"Error", MB_OK);
+		MessageBox(hwnd, L"Could not initialize the Texture shader object.", L"Error", MB_OK);
 		return false;
 	}
 
@@ -73,21 +82,31 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 		return false;
 	}
 
+	// 비트맵 객체 생성
+	m_cursor = new BitmapClass;
+
+	// 비트맵 객체 초기화
+	ResourceManager::getInstance()->LoadCursorBitmap(m_Direct3D->GetDevice(), m_cursor);
+
+	// Text 객체
+	TextManager::getInstance()->m_textClass = new TextClass();
+	TextManager::getInstance()->m_textClass->Initialize(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), hwnd, WIN_SIZE_WIDTH, WIN_SIZE_HEIGHT, baseViewMatrix);
+
 	return true;
 }
 
 
 void GraphicsClass::Shutdown()
 {
-	// 투명 쉐이더 객체를 해제합니다.
-	if (m_TransparentShader)
+	// m_Bitmap 객체 반환
+	if (m_cursor)
 	{
-		m_TransparentShader->Shutdown();
-		delete m_TransparentShader;
-		m_TransparentShader = 0;
+		m_cursor->Shutdown();
+		delete m_cursor;
+		m_cursor = 0;
 	}
 
-	// 텍스처 쉐이더 객체를 해제한다.
+	// m_TextureShader 객체 반환
 	if (m_TextureShader)
 	{
 		m_TextureShader->Shutdown();
@@ -111,11 +130,9 @@ void GraphicsClass::Shutdown()
 	}
 }
 
-bool GraphicsClass::Render(SystemFrame* systemFrame)
+bool GraphicsClass::Render(SystemFrame* systemFrame, int cursorXPos, int cursorYPos)
 {
-	// 블렌딩 양을 100% 설정합니다.
 	float blendAmount = 1.0f;
-
 	// 씬을 그리기 위해 버퍼를 지웁니다
 	m_Direct3D->BeginScene(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -136,7 +153,15 @@ bool GraphicsClass::Render(SystemFrame* systemFrame)
 	// 투명도가 작동하도록 알파 블렌드를 켭니다.
 	m_Direct3D->TurnOnAlphaBlending();
 
-	if (!systemFrame->Render(m_Direct3D->GetDeviceContext(), m_TextureShader, m_TransparentShader, worldMatrix, viewMatrix, orthoMatrix, blendAmount))
+	systemFrame->Render(m_Direct3D->GetDeviceContext(), worldMatrix, viewMatrix, orthoMatrix);
+
+	if (!m_cursor->Render(m_Direct3D->GetDeviceContext(), cursorXPos, cursorYPos))
+	{
+		return false;
+	}
+
+
+	if (!m_TransparentShader->Render(m_Direct3D->GetDeviceContext(), m_cursor->GetIndexCount(), worldMatrix, viewMatrix, orthoMatrix, m_cursor->GetTexture(), blendAmount))
 	{
 		return false;
 	}
@@ -151,4 +176,19 @@ bool GraphicsClass::Render(SystemFrame* systemFrame)
 	m_Direct3D->EndScene();
 
 	return true;
+}
+
+void GraphicsClass::LoadData()
+{
+	ResourceManager::getInstance()->LoadGameData(m_Direct3D->GetDevice());
+}
+
+TextureShaderClass* GraphicsClass::GetTextureShaderClass()
+{
+	return m_TextureShader;
+}
+
+TransparentShaderClass* GraphicsClass::GetTransparentShaderClass()
+{
+	return m_TransparentShader;
 }

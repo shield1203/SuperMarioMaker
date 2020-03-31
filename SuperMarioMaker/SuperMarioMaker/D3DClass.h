@@ -7,7 +7,7 @@ public:
 	D3DClass(const D3DClass&);
 	~D3DClass();
 
-	bool Initialize(int, int, bool, HWND, float, float);
+	bool Initialize(int, int, bool, HWND, bool, float, float);
 	void Shutdown();
 
 	void BeginScene(float, float, float, float);
@@ -27,6 +27,9 @@ public:
 
 	void TurnOnAlphaBlending();
 	void TurnOffAlphaBlending();
+
+	ID3D11DepthStencilView* GetDepthStencilView();
+	void SetBackBufferRenderTarget();
 private:
 	bool m_vsync_enabled = false;
 	int m_videoCardMemory = 0;

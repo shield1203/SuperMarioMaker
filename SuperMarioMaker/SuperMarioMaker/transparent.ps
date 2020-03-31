@@ -36,7 +36,7 @@ float4 TransparentPixelShader(PixelInputType input) : SV_TARGET
 	// 이 위치에서 텍스처 픽셀을 샘플링합니다.
     color = shaderTexture.Sample(SampleType, input.tex);
 
-	if(color.a == 1.0f)
+	if(color.a >= 0.8f)
 	{
 		// 이 픽셀의 알파 값을 혼합 양으로 설정하여 알파 블렌딩 효과를 만듭니다.
 		color.a = blendAmount;

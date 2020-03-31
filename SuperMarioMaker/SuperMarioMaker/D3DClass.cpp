@@ -385,16 +385,10 @@ void D3DClass::Shutdown()
 		m_swapChain->SetFullscreenState(false, NULL);
 	}
 
-	if (m_alphaEnableBlendingState)
+	if (m_depthDisabledStencilState)
 	{
-		m_alphaEnableBlendingState->Release();
-		m_alphaEnableBlendingState = 0;
-	}
-
-	if (m_alphaDisableBlendingState)
-	{
-		m_alphaDisableBlendingState->Release();
-		m_alphaDisableBlendingState = 0;
+		m_depthDisabledStencilState->Release();
+		m_depthDisabledStencilState = 0;
 	}
 
 	if (m_rasterState)
@@ -407,12 +401,6 @@ void D3DClass::Shutdown()
 	{
 		m_depthStencilView->Release();
 		m_depthStencilView = 0;
-	}
-
-	if (m_depthDisabledStencilState)
-	{
-		m_depthDisabledStencilState->Release();
-		m_depthDisabledStencilState = 0;
 	}
 
 	if (m_depthStencilState)

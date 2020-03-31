@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Text>
+  <LoginSystem>
+    <TextData xPos ="415" yPos="310" r="1" g="1" b="1">Login_Result</TextData>
+    <TextData xPos ="415" yPos="345" r="1" g="1" b="1">Nick_name</TextData>
+  </LoginSystem>
+</Text>

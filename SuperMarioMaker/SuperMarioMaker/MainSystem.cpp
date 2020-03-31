@@ -6,9 +6,11 @@
 #include "GraphicsClass.h"
 
 #include "SystemFrame.h"
-//#include "TitleSystem"
+#include "LoginSystem.h"
+#include "TitleSystem.h"
 
 #include "ResourceManager.h"
+#include "TextManager.h"
 
 MainSystem::MainSystem()
 {
@@ -20,17 +22,33 @@ MainSystem::~MainSystem()
 
 bool MainSystem::InitializeMainSystem()
 {
-	m_gmaeStep = GAME_STEP::STEP_TITLE;
-
 	int screenWidth = 0;
 	int screenHeight = 0;
 
 	InitializeWindows(screenWidth, screenHeight);
 
-	m_inputSystem = InputSystem::getInstance();
-	m_resourceManager = ResourceManager::getInstance();
+	m_GraphicsClass = new GraphicsClass;
+	if (!m_GraphicsClass->Initialize(screenWidth, screenHeight, m_hwnd))
+	{
+		return false;
+	}
 
-	return m_GraphicsClass->Initialize(screenWidth, screenHeight, m_hwnd);
+	m_inputSystem = InputSystem::getInstance();
+	if (!m_inputSystem->Initialize(m_hinstance, m_hwnd))
+	{
+		MessageBox(m_hwnd, L"Could not initialize the input object.", L"Error", MB_OK);
+		return false;
+	}
+
+	m_gmaeStep = GAME_STEP::STEP_LOGIN;
+	m_resourceManager = ResourceManager::getInstance();
+	m_textManager = TextManager::getInstance();
+	m_GraphicsClass->LoadData();
+
+	m_systemFrame = new LoginSystem();
+	m_systemFrame->Initiallize(m_GraphicsClass->GetTextureShaderClass(), m_GraphicsClass->GetTransparentShaderClass());
+
+	return true;
 }
 
 void MainSystem::Run()
@@ -55,53 +73,90 @@ void MainSystem::Run()
 		else
 		{
 			// 그 외에는 게임로직을 처리합니다.
-			if (m_resourceManager->m_curGameStep != GAME_STEP::STEP_GAME_EXIT)
+			Initialize();
+			Update();
+			if (!Render())
 			{
-				Initialize();
-				Update();
-				Render();
+				break;
 			}
+		}
+
+		if (m_inputSystem->IsEscapePressed())
+		{
+			break;
 		}
 	}
 }
 
 void MainSystem::Shutdown()
 {
+	m_GraphicsClass->Shutdown();
+	SafeDelete(m_GraphicsClass);
+
+	m_inputSystem->Shutdown();
 	SafeDelete(m_inputSystem);
+
+	SafeDelete(m_textManager);
 
 	ShutdownWindows();
 }
 
 void MainSystem::Initialize()
 {
+	if (m_resourceManager->m_curGameStep != m_gmaeStep)
+	{
+		m_systemFrame->Release();
+		SafeDelete(m_systemFrame);
 
+		m_gmaeStep = m_resourceManager->m_curGameStep;
+
+		switch (m_resourceManager->m_curGameStep)
+		{
+		case GAME_STEP::STEP_LOGIN:
+			m_systemFrame = new LoginSystem();
+			break;
+		case GAME_STEP::STEP_TITLE:
+			m_systemFrame = new TitleSystem();
+			break;
+		}
+
+		m_systemFrame->Initiallize(m_GraphicsClass->GetTextureShaderClass(), m_GraphicsClass->GetTransparentShaderClass());
+		m_GraphicsClass->LoadData();
+	}
+	
 }
 
 void MainSystem::Update()
 {
+	m_inputSystem->Update();
 
+	m_systemFrame->Update();
 }
 
-void MainSystem::Render()
+bool MainSystem::Render()
 {
-	m_GraphicsClass->Render(m_systemFrame);
+	int cursorXPos = 0;
+	int cursorYPos = 0;
+	m_inputSystem->GetMouseLocation(cursorXPos, cursorYPos);
+
+	return m_GraphicsClass->Render(m_systemFrame, cursorXPos, cursorYPos);
 }
 
 void MainSystem::InitializeWindows(int& screenWidth, int& screenHeight)
 {
-	LoadString(m_hinstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-	LoadString(m_hinstance, IDC_SUPERMARIOMAKER, szWindowClass, MAX_LOADSTRING);
-
 	// 외부 포인터를 이 객체로 지정합니다
 	ApplicationHandle = this;
 
 	// 이 프로그램의 인스턴스를 가져옵니다
 	m_hinstance = GetModuleHandle(NULL);
 
+	LoadString(m_hinstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
+	LoadString(m_hinstance, IDC_SUPERMARIOMAKER, szWindowClass, MAX_LOADSTRING);
+
 	// windows 클래스를 아래와 같이 설정합니다.
 	WNDCLASSEX wc;
 
-	wc.style = CS_HREDRAW | CS_VREDRAW;
+	wc.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
 	wc.lpfnWndProc = WndProc;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
@@ -111,7 +166,7 @@ void MainSystem::InitializeWindows(int& screenWidth, int& screenHeight)
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
 	wc.lpszMenuName = NULL;
-	wc.lpszClassName = m_applicationName;
+	wc.lpszClassName = szWindowClass;
 	wc.cbSize = sizeof(WNDCLASSEX);
 
 	// windows class를 등록합니다
@@ -161,7 +216,6 @@ LRESULT CALLBACK MainSystem::MessageHandler(HWND hwnd, UINT umsg, WPARAM wparam,
 	case WM_KEYDOWN:
 	{
 		// 키 눌림 flag를 m_Input 객체에 처리하도록 합니다
-		m_inputSystem->KeyDown((unsigned int)wparam);
 		return 0;
 	}
 
@@ -169,7 +223,6 @@ LRESULT CALLBACK MainSystem::MessageHandler(HWND hwnd, UINT umsg, WPARAM wparam,
 	case WM_KEYUP:
 	{
 		// 키 해제 flag를 m_Input 객체에 처리하도록 합니다.
-		m_inputSystem->KeyUp((unsigned int)wparam);
 		return 0;
 	}
 	case WM_DESTROY:

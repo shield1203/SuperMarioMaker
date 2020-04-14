@@ -21,10 +21,12 @@ ResourceManager::ResourceManager()
 
 ResourceManager::~ResourceManager()
 {
+	m_cursor->Shutdown();
+	SafeDelete(m_cursor);
 	Inst = nullptr;
 }
 
-void ResourceManager::LoadCursorBitmap(ID3D11Device* device, BitmapClass* cursorBitmap)
+void ResourceManager::LoadCursorBitmap(ID3D11Device* device)
 {
 	TiXmlDocument doc;
 	doc.LoadFile("ResourceData.xml");
@@ -53,13 +55,14 @@ void ResourceManager::LoadCursorBitmap(ID3D11Device* device, BitmapClass* cursor
 
 	RECT rt = { 0, 0, 0, 0 };
 
-	cursorBitmap->Initialize(device, WIN_SIZE_WIDTH, WIN_SIZE_HEIGHT, filename, width, height, rt, 0);
+	m_cursor = new BitmapClass();
+	m_cursor->Initialize(device, WIN_SIZE_WIDTH, WIN_SIZE_HEIGHT, filename, width, height, rt, 0);
 	SafeDelete(filename);
 }
 
-void ResourceManager::LoadGameData(ID3D11Device* device)
+void ResourceManager::LoadGameData(ID3D11Device* device, GAME_STEP gameStep)
 {
-	switch (m_curGameStep)
+	switch (gameStep)
 	{
 	case GAME_STEP::STEP_LOGIN:
 		m_curStepString = "LoginSystem";
@@ -73,6 +76,12 @@ void ResourceManager::LoadGameData(ID3D11Device* device)
 		break;
 	case GAME_STEP::STEP_MAKER:
 		m_curStepString = "MakerSystem";
+		LoadBackgroundData(device);
+		LoadButton(device);
+		LoadMapSprite(device, "Object");
+		LoadMapSprite(device, "Tile");
+		LoadMapSprite(device, "Item");
+		LoadMapSprite(device, "Enemy");
 		break;
 	case GAME_STEP::STEP_SINGLE_PLAY:
 		m_curStepString = "SinglePlaySystem";
@@ -88,9 +97,13 @@ void ResourceManager::LoadGameData(ID3D11Device* device)
 		break;
 	case GAME_STEP::STEP_UPLOAD:
 		m_curStepString = "UploadSystem";
+		LoadBackgroundData(device);
+		LoadButton(device);
 		break;
 	case GAME_STEP::STEP_DOWNLOAD:
 		m_curStepString = "DownloadSystem";
+		LoadBackgroundData(device);
+		LoadButton(device);
 		break;
 	}
 }
@@ -161,6 +174,17 @@ void ResourceManager::LoadButton(ID3D11Device* device)
 		pAttrib = pAttrib->Next();
 
 		addButton->yPos = pAttrib->IntValue();
+		pAttrib = pAttrib->Next();
+
+		int state = pAttrib->IntValue();
+		if (state)
+		{
+			addButton->state = BUTTON_STATE::BUTTON_ON;
+		}
+		else
+		{
+			addButton->state = BUTTON_STATE::BUTTON_OFF;
+		}
 
 		pSubElem = pElem->FirstChildElement("ImagePath");
 		while (pSubElem != nullptr)
@@ -224,6 +248,86 @@ void ResourceManager::LoadPlayerSprite(ID3D11Device* device)
 	pElem = pRoot->FirstChildElement("Player")->FirstChildElement("Type");
 }
 
+void ResourceManager::LoadMapSprite(ID3D11Device* device, string element)
+{
+	TiXmlDocument doc;
+	doc.LoadFile("ResourceData.xml");
+
+	TiXmlElement* pRoot = doc.FirstChildElement("Resource");
+	if (!pRoot) return;
+
+	TiXmlElement* pElem = nullptr;
+	TiXmlElement* pSubElem = nullptr;
+	TiXmlAttribute* pAttrib = nullptr;
+
+	pElem = pRoot->FirstChildElement(element.c_str())->FirstChildElement("SpriteData");
+	while (pElem != nullptr)
+	{
+		Sprite* addSprite = new Sprite;
+
+		pSubElem = pElem->FirstChildElement("ImagePath");
+		while (pSubElem != nullptr)
+		{
+			pAttrib = pSubElem->FirstAttribute();
+
+			BitmapClass* addBitmap = new BitmapClass();
+
+			int width = pAttrib->IntValue();
+			pAttrib = pAttrib->Next();
+
+			int height = pAttrib->IntValue();
+			pAttrib = pAttrib->Next();
+
+			RECT collision;
+			collision.left = pAttrib->IntValue();
+			pAttrib = pAttrib->Next();
+
+			collision.right = pAttrib->IntValue();
+			pAttrib = pAttrib->Next();
+
+			collision.top = pAttrib->IntValue();
+			pAttrib = pAttrib->Next();
+
+			collision.bottom = pAttrib->IntValue();
+			pAttrib = pAttrib->Next();
+
+			int time = pAttrib->IntValue();
+
+			WCHAR* filename;
+			const char* str = pSubElem->GetText();
+			int strSize = MultiByteToWideChar(CP_ACP, 0, str, -1, NULL, NULL);
+			filename = new WCHAR[strSize];
+			MultiByteToWideChar(CP_ACP, 0, str, strlen(str) + 1, filename, strSize);
+
+			addBitmap->Initialize(device, WIN_SIZE_WIDTH, WIN_SIZE_HEIGHT, filename, width, height, collision, time);
+			SafeDelete(filename);
+
+			addSprite->image.push_back(addBitmap);
+
+			pSubElem = pSubElem->NextSiblingElement();
+		}
+
+		if (element == "Object")
+		{
+			m_objectSprite.push_back(addSprite);
+		}
+		else if (element == "Tile")
+		{
+			m_tileSprite.push_back(addSprite);
+		}
+		else if (element == "Item")
+		{
+			m_itemSprite.push_back(addSprite);
+		}
+		else if (element == "Enemy")
+		{
+			m_enemySprite.push_back(addSprite);
+		}
+
+		pElem = pElem->NextSiblingElement();
+	}
+}
+
 void ResourceManager::ReleaseData(GAME_STEP gameStep)
 {
 	switch (gameStep)
@@ -233,10 +337,13 @@ void ResourceManager::ReleaseData(GAME_STEP gameStep)
 		ReleaseButton();
 		break;
 	case GAME_STEP::STEP_TITLE:
-		
+		ReleaseBackground();
+		ReleaseButton();
 		break;
 	case GAME_STEP::STEP_MAKER:
-
+		ReleaseBackground();
+		ReleaseButton();
+		ReleaseMapSprite();
 		break;
 	case GAME_STEP::STEP_SINGLE_PLAY:
 
@@ -251,10 +358,12 @@ void ResourceManager::ReleaseData(GAME_STEP gameStep)
 		
 		break;
 	case GAME_STEP::STEP_UPLOAD:
-		
+		ReleaseBackground();
+		ReleaseButton();
 		break;
 	case GAME_STEP::STEP_DOWNLOAD:
-		
+		ReleaseBackground();
+		ReleaseButton();
 		break;
 	}
 }
@@ -303,9 +412,9 @@ void ResourceManager::ReleasePlayer()
 	m_playerSprite.clear();
 }
 
-void ResourceManager::ReleaseMap()
+void ResourceManager::ReleaseMapSprite()
 {
-	for (auto monsterSprite : m_monsterSprite)
+	for (auto monsterSprite : m_enemySprite)
 	{
 		for (auto image : monsterSprite->image)
 		{
@@ -314,7 +423,7 @@ void ResourceManager::ReleaseMap()
 		}
 		monsterSprite->image.clear();
 	}
-	m_monsterSprite.clear();
+	m_enemySprite.clear();
 
 	for (auto tileSprite : m_tileSprite)
 	{

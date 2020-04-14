@@ -73,19 +73,19 @@ void TitleCursor::ChangeGameStep()
 			switch (static_cast<TITLE>(count))
 			{
 			case TITLE::TITLE_MAKER_BT:
-
+				m_resourceManager->m_curGameStep = GAME_STEP::STEP_MAKER;
 				break;
 			case TITLE::TITLE_SINGLE_PLAY_BT:
-
+				//m_resourceManager->m_curGameStep = GAME_STEP::STEP_SINGLE_PLAY;
 				break;
 			case TITLE::TITLE_MULTIPLAY_BT:
-
+				//m_resourceManager->m_curGameStep = GAME_STEP::STEP_TEAM;
 				break;
 			case TITLE::TITLE_UPLOAD_MAP_BT:
-
+				m_resourceManager->m_curGameStep = GAME_STEP::STEP_UPLOAD;
 				break;
 			case TITLE::TITLE_DOWNLOAD_MAP_BT:
-
+				m_resourceManager->m_curGameStep = GAME_STEP::STEP_DOWNLOAD;
 				break;
 			}
 

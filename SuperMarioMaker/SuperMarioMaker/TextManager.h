@@ -5,7 +5,6 @@ struct TextData
 {
 	string text = "";
 	vector<char>writable;
-	char* updateText = nullptr;
 	int xPos = 0;
 	int yPos = 0;
 	float red, green, blue;
@@ -30,9 +29,11 @@ public:
 	void LoadUserData();
 	void SaveUserData();
 
-	void SetGameStepString(GAME_STEP);
+	void LoadData(GAME_STEP);
 	void LoadTextData();
-	
+	void LoadMapFileName();
+	void ParseMapList();
+
 	void SetTextData();
 	void UpdateText(unsigned int);
 

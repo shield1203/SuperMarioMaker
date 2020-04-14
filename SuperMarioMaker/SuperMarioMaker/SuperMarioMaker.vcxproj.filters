@@ -61,9 +61,6 @@
     <Filter Include="헤더 파일\xmlParser">
       <UniqueIdentifier>{cc85a549-a384-4aed-937c-b73de85c7b02}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\05.Utilty\02.ResourceManager\00.Player">
-      <UniqueIdentifier>{a7a538cd-1c2d-456e-a25e-57306d66c982}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\happyhttp">
       <UniqueIdentifier>{1014d3d4-f198-438b-96d9-392c0205b863}</UniqueIdentifier>
     </Filter>
@@ -114,6 +111,27 @@
     </Filter>
     <Filter Include="소스 파일\04.Systems\01.LoginSystem\01.NIcknameTextBox">
       <UniqueIdentifier>{773965f1-2de5-4b90-91b3-6fc62d69fa0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\03.MakerSystem\00.MakerCursor">
+      <UniqueIdentifier>{7c2a5013-0b3c-47f2-87c6-52e1a22c7a1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\03.MakerSystem\01.MakerMap">
+      <UniqueIdentifier>{42be48dc-bc62-4a57-9aab-94491fa3a71f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlaySystem">
+      <UniqueIdentifier>{86b32cc8-4a56-45d0-ac31-48f615ed24e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\06.UploadSystem">
+      <UniqueIdentifier>{623b1552-906d-47be-bd45-198625ef86c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\07.DownloadSystem">
+      <UniqueIdentifier>{7d48817f-3f1c-4444-a515-868314fd64fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\06.UploadSystem\00.UploadCursor">
+      <UniqueIdentifier>{667f2155-59e4-4fd7-8ea8-27732deeb5bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\07.DownloadSystem\00.DownloadCursor">
+      <UniqueIdentifier>{d70d249d-3acc-4b1a-a7b0-f89dce7fb938}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -189,9 +207,6 @@
     <ClInclude Include="TitleCursor.h">
       <Filter>소스 파일\04.Systems\02.TitleSystem\00.TitleCursor</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>소스 파일\05.Utilty\02.ResourceManager\00.Player</Filter>
-    </ClInclude>
     <ClInclude Include="SinglePlaySystem.h">
       <Filter>소스 파일\04.Systems\04.SinglePlaySystem</Filter>
     </ClInclude>
@@ -224,6 +239,27 @@
     </ClInclude>
     <ClInclude Include="NicknameTextBox.h">
       <Filter>소스 파일\04.Systems\01.LoginSystem\01.NIcknameTextBox</Filter>
+    </ClInclude>
+    <ClInclude Include="MakerSystem.h">
+      <Filter>소스 파일\04.Systems\03.MakerSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MakerCursor.h">
+      <Filter>소스 파일\04.Systems\03.MakerSystem\00.MakerCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="MakerMap.h">
+      <Filter>소스 파일\04.Systems\03.MakerSystem\01.MakerMap</Filter>
+    </ClInclude>
+    <ClInclude Include="UploadSystem.h">
+      <Filter>소스 파일\04.Systems\06.UploadSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="UploadCursor.h">
+      <Filter>소스 파일\04.Systems\06.UploadSystem\00.UploadCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="DownloadSystem.h">
+      <Filter>소스 파일\04.Systems\07.DownloadSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="DownloadCursor.h">
+      <Filter>소스 파일\04.Systems\07.DownloadSystem\00.DownloadCursor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -287,9 +323,6 @@
     <ClCompile Include="TitleCursor.cpp">
       <Filter>소스 파일\04.Systems\02.TitleSystem\00.TitleCursor</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>소스 파일\05.Utilty\02.ResourceManager\00.Player</Filter>
-    </ClCompile>
     <ClCompile Include="SinglePlaySystem.cpp">
       <Filter>소스 파일\04.Systems\04.SinglePlaySystem</Filter>
     </ClCompile>
@@ -323,6 +356,27 @@
     <ClCompile Include="NicknameTextBox.cpp">
       <Filter>소스 파일\04.Systems\01.LoginSystem\01.NIcknameTextBox</Filter>
     </ClCompile>
+    <ClCompile Include="MakerSystem.cpp">
+      <Filter>소스 파일\04.Systems\03.MakerSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MakerCursor.cpp">
+      <Filter>소스 파일\04.Systems\03.MakerSystem\00.MakerCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="MakerMap.cpp">
+      <Filter>소스 파일\04.Systems\03.MakerSystem\01.MakerMap</Filter>
+    </ClCompile>
+    <ClCompile Include="UploadSystem.cpp">
+      <Filter>소스 파일\04.Systems\06.UploadSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="UploadCursor.cpp">
+      <Filter>소스 파일\04.Systems\06.UploadSystem\00.UploadCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="DownloadSystem.cpp">
+      <Filter>소스 파일\04.Systems\07.DownloadSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="DownloadCursor.cpp">
+      <Filter>소스 파일\04.Systems\07.DownloadSystem\00.DownloadCursor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SuperMarioMaker.rc">
@@ -337,6 +391,9 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="Icon.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Texture\font.dds">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

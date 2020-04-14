@@ -1,17 +1,12 @@
 #include "stdafx.h"
+#include "GraphicsClass.h"
 #include "TextureClass.h"
+#include "TransparentShaderClass.h"
 #include "BitmapClass.h"
-
 
 BitmapClass::BitmapClass()
 {
 }
-
-
-BitmapClass::BitmapClass(const BitmapClass& other)
-{
-}
-
 
 BitmapClass::~BitmapClass()
 {
@@ -20,15 +15,14 @@ BitmapClass::~BitmapClass()
 
 bool BitmapClass::Initialize(ID3D11Device* device, int screenWidth, int screenHeight, WCHAR* textureFilename, int bitmapWidth, int bitmapHeight, RECT collision, unsigned int time)
 {
-	// 화면 크기를 멤버변수에 저장
+	m_shaderClass = GraphicsClass::getInstance()->GetTransparentShaderClass();
+
 	m_screenWidth = screenWidth;
 	m_screenHeight = screenHeight;
 
-	// 렌더링할 비트맵의 픽셀의 크기를 저장
 	m_bitmapWidth = bitmapWidth;
 	m_bitmapHeight = bitmapHeight;
 
-	// 이전 렌더링 위치를 음수로 초기화합니다.
 	m_previousPosX = -1;
 	m_previousPosY = -1;
 
@@ -52,15 +46,15 @@ bool BitmapClass::Initialize(ID3D11Device* device, int screenWidth, int screenHe
 
 void BitmapClass::Shutdown()
 {
-	// 모델 텍스쳐를 반환합니다.
 	ReleaseTexture();
 
-	// 버텍스 및 인덱스 버퍼를 종료합니다.
 	ShutdownBuffers();
+
+	m_shaderClass = nullptr;
 }
 
 
-bool BitmapClass::Render(ID3D11DeviceContext* deviceContext, int positionX, int positionY)
+bool BitmapClass::Render(ID3D11DeviceContext* deviceContext, int positionX, int positionY, XMMATRIX worldMatrix, XMMATRIX viewMatrix, XMMATRIX orthoMatrix, float blending)
 {
 	// 화면의 다른 위치로 렌더링하기 위해 동적 정점 버퍼를 다시 빌드합니다.
 	if (!UpdateBuffers(deviceContext, positionX, positionY))
@@ -70,6 +64,11 @@ bool BitmapClass::Render(ID3D11DeviceContext* deviceContext, int positionX, int 
 
 	// 그리기를 준비하기 위해 그래픽 파이프 라인에 꼭지점과 인덱스 버퍼를 놓습니다.
 	RenderBuffers(deviceContext);
+
+	if (!m_shaderClass->Render(deviceContext, m_indexCount, worldMatrix, viewMatrix, orthoMatrix, m_Texture->GetTexture(), blending))
+	{
+		return false;
+	}
 
 	return true;
 }
@@ -318,7 +317,7 @@ void BitmapClass::GetCollisionRECT(RECT& collision)
 	collision.bottom = m_collision.bottom;
 }
 
-void BitmapClass::GetAniTime(unsigned int& aniTime)
+unsigned int BitmapClass::GetAniTime()
 {
-	aniTime = m_time;
+	return m_time;
 }

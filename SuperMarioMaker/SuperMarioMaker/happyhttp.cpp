@@ -275,7 +275,7 @@ namespace happyhttp
 		if (m_Sock < 0) {
 			BailOnSocketError("socket()");
 		}
-		//	printf("Connecting to %s on port %d.\n",inet_ntoa(*addr), port);
+			//printf("Connecting to %s on port %d.\n",inet_ntoa(*addr), port);
 
 		if (::connect(m_Sock, (sockaddr const*)&address, sizeof(address)) < 0) {
 			BailOnSocketError("connect()");

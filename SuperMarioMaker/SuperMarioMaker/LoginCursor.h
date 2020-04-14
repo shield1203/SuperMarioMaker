@@ -13,7 +13,7 @@ private:
 	HttpSystem* m_httpSystem = nullptr;
 
 	LOGIN m_state;
-	bool m_click;
+	bool m_click = false;
 public:
 	LOGIN Update(LOGIN);
 	void CheckCursorLocation();

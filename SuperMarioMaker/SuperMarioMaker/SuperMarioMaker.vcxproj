@@ -151,16 +151,20 @@
     <ClInclude Include="BitmapClass.h" />
     <ClInclude Include="CameraClass.h" />
     <ClInclude Include="DDSTextureLoader.h" />
+    <ClInclude Include="DownloadCursor.h" />
+    <ClInclude Include="DownloadSystem.h" />
     <ClInclude Include="FontClass.h" />
     <ClInclude Include="FontShaderClass.h" />
     <ClInclude Include="happyhttp.h" />
     <ClInclude Include="HttpSystem.h" />
+    <ClInclude Include="MakerMap.h" />
+    <ClInclude Include="MakerCursor.h" />
+    <ClInclude Include="MakerSystem.h" />
     <ClInclude Include="NicknameTextBox.h" />
     <ClInclude Include="TextClass.h" />
     <ClInclude Include="TextManager.h" />
     <ClInclude Include="LoginCursor.h" />
     <ClInclude Include="LoginSystem.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="SinglePlaySystem.h" />
     <ClInclude Include="TitleCursor.h" />
     <ClInclude Include="D3DClass.h" />
@@ -182,22 +186,28 @@
     <ClInclude Include="tinyxml.h" />
     <ClInclude Include="TitleSystem.h" />
     <ClInclude Include="TransparentShaderClass.h" />
+    <ClInclude Include="UploadCursor.h" />
+    <ClInclude Include="UploadSystem.h" />
     <ClInclude Include="WICTextureLoader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitmapClass.cpp" />
     <ClCompile Include="CameraClass.cpp" />
     <ClCompile Include="DDSTextureLoader.cpp" />
+    <ClCompile Include="DownloadCursor.cpp" />
+    <ClCompile Include="DownloadSystem.cpp" />
     <ClCompile Include="FontClass.cpp" />
     <ClCompile Include="FontShaderClass.cpp" />
     <ClCompile Include="happyhttp.cpp" />
     <ClCompile Include="HttpSystem.cpp" />
+    <ClCompile Include="MakerMap.cpp" />
+    <ClCompile Include="MakerCursor.cpp" />
+    <ClCompile Include="MakerSystem.cpp" />
     <ClCompile Include="NicknameTextBox.cpp" />
     <ClCompile Include="TextClass.cpp" />
     <ClCompile Include="TextManager.cpp" />
     <ClCompile Include="LoginCursor.cpp" />
     <ClCompile Include="LoginSystem.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="SinglePlaySystem.cpp" />
     <ClCompile Include="TitleCursor.cpp" />
     <ClCompile Include="D3DClass.cpp" />
@@ -216,6 +226,8 @@
     <ClCompile Include="tinyxmlparser.cpp" />
     <ClCompile Include="TitleSystem.cpp" />
     <ClCompile Include="TransparentShaderClass.cpp" />
+    <ClCompile Include="UploadCursor.cpp" />
+    <ClCompile Include="UploadSystem.cpp" />
     <ClCompile Include="WICTextureLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +237,7 @@
     <Image Include="Icon.ico" />
     <Image Include="small.ico" />
     <Image Include="SuperMarioMaker.ico" />
+    <Image Include="Texture\font.dds" />
   </ItemGroup>
   <ItemGroup>
     <None Include="font.ps" />

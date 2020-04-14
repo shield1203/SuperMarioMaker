@@ -22,7 +22,7 @@ TextManager::TextManager()
 	m_curStepString = "";
 	m_id = "";
 	m_nickName = "";
-	m_result = "";
+	m_result = "Login Fail";
 
 	LoadUserData();
 }
@@ -71,18 +71,22 @@ void TextManager::SaveUserData()
 	doc.SaveFile("UserData.xml");
 }
 
-void TextManager::SetGameStepString(GAME_STEP gameStep)
+void TextManager::LoadData(GAME_STEP gameStep)
 {
 	switch (gameStep)
 	{
 	case GAME_STEP::STEP_LOGIN:
 		m_curStepString = "LoginSystem";
+		LoadTextData();
+		SetTextData();
 		break;
 	case GAME_STEP::STEP_TITLE:
 		m_curStepString = "TitleSystem";
 		break;
 	case GAME_STEP::STEP_MAKER:
 		m_curStepString = "MakerSystem";
+		LoadTextData();
+		SetTextData();
 		break;
 	case GAME_STEP::STEP_SINGLE_PLAY:
 		m_curStepString = "SinglePlaySystem";
@@ -98,9 +102,21 @@ void TextManager::SetGameStepString(GAME_STEP gameStep)
 		break;
 	case GAME_STEP::STEP_UPLOAD:
 		m_curStepString = "UploadSystem";
+		LoadTextData();
+		LoadMapFileName();
+		SetTextData();
 		break;
 	case GAME_STEP::STEP_DOWNLOAD:
 		m_curStepString = "DownloadSystem";
+		if (m_result != "MapList_Fail")
+		{
+			ParseMapList();
+		}
+		else
+		{
+			LoadTextData();
+		}
+		SetTextData();
 		break;
 	}
 }
@@ -145,16 +161,66 @@ void TextManager::LoadTextData()
 	}
 }
 
+void TextManager::LoadMapFileName()
+{
+	_finddata_t fd;
+	long handle;
+	int result = 1;
+	handle = _findfirst(".\\Maps\\*.*xml", &fd);
+
+	while (result != -1)
+	{
+		TextData* addTextData = new TextData();
+
+		addTextData->xPos = m_textData[0]->xPos;
+		addTextData->yPos = m_textData[0]->yPos;
+		addTextData->red = m_textData[0]->red;
+		addTextData->green = m_textData[0]->green;
+		addTextData->blue = m_textData[0]->blue;
+		addTextData->text = fd.name;
+
+		int xPos = (9 - addTextData->text.size()) * 5; // 최대한 가운데 정렬
+		addTextData->xPos += xPos;
+
+		m_textData.push_back(addTextData);
+
+		result = _findnext(handle, &fd);
+	}
+
+	_findclose(handle);
+}
+
+void TextManager::ParseMapList()
+{
+	int count = 0;
+	int num = 0;
+	while (count < m_result.size())
+	{
+		TextData* addTextData = new TextData();
+		while (m_result[count] != '!')
+		{
+			addTextData->text.push_back(m_result[count]);
+			count++;
+		}
+		addTextData->xPos = 340;
+		addTextData->yPos = 255 +((num % 8) * 25);
+		addTextData->red = 1;
+		addTextData->green = 1;
+		addTextData->blue = 1;
+
+		m_textData.push_back(addTextData);
+		count++;
+		num++;
+	}
+}
+
 void TextManager::SetTextData()
 {
 	for (int i = 0; i < m_textData.size(); i++)
 	{
 		m_textClass->AddSentence();
 
-		m_textData[i]->writable.assign(m_textData[i]->text.begin(), m_textData[i]->text.end());
-		m_textData[i]->writable.push_back('\0');
-		m_textData[i]->updateText = &m_textData[i]->writable[0];
-		m_textClass->SetSentence(m_textData[i]->updateText, i, m_textData[i]->xPos, m_textData[i]->yPos, m_textData[i]->red, m_textData[i]->green, m_textData[i]->blue);
+		UpdateText(i);
 	}
 }
 
@@ -163,8 +229,8 @@ void TextManager::UpdateText(unsigned int textDataNum)
 	m_textData[textDataNum]->writable.clear();
 	m_textData[textDataNum]->writable.assign(m_textData[textDataNum]->text.begin(), m_textData[textDataNum]->text.end());
 	m_textData[textDataNum]->writable.push_back('\0');
-	m_textData[textDataNum]->updateText = &m_textData[textDataNum]->writable[0];
-	m_textClass->SetSentence(m_textData[textDataNum]->updateText, textDataNum, m_textData[textDataNum]->xPos, m_textData[textDataNum]->yPos,
+
+	m_textClass->SetSentence(&m_textData[textDataNum]->writable[0], textDataNum, m_textData[textDataNum]->xPos, m_textData[textDataNum]->yPos,
 		m_textData[textDataNum]->red, m_textData[textDataNum]->green, m_textData[textDataNum]->blue);
 }
 
@@ -172,8 +238,8 @@ void TextManager::ReleaseTextData()
 {
 	for (auto textData : m_textData)
 	{
+		textData->text.clear();
 		textData->writable.clear();
-		textData->updateText = nullptr;
 		SafeDelete(textData);
 	}
 	m_textData.clear();

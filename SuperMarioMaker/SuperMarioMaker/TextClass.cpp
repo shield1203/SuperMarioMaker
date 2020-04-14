@@ -80,6 +80,7 @@ void TextClass::Shutdown()
 
 bool TextClass::Render(unsigned int sentenceNum, XMMATRIX worldMatrix, XMMATRIX orthoMatrix)
 {
+	worldMatrix = XMMatrixScaling(2, 2, 0);
 	if (!RenderSentence(m_deviceContext, m_sentence[sentenceNum], worldMatrix, orthoMatrix))
 	{
 		return false;

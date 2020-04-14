@@ -28,9 +28,13 @@ bool InputSystem::Initialize(HINSTANCE hinstance, HWND hwnd)
 	m_screenWidth = WIN_SIZE_WIDTH;
 	m_screenHeight = WIN_SIZE_HEIGHT;
 
+	// 최소 위치
+	m_minimumX = 0;
+	m_minimumY = 0;
+
 	// 화면에서 마우스의 위치를 ​​초기화 합니다.
-	m_mouseX = 0;
-	m_mouseY = 0;
+	m_mouseX = WIN_SIZE_WIDTH / 2;
+	m_mouseY = WIN_SIZE_HEIGHT / 2;
 
 	// 기본 직접 입력 인터페이스를 초기화 합니다.
 	HRESULT result = DirectInput8Create(hinstance, DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&m_directInput, NULL);
@@ -212,11 +216,35 @@ void InputSystem::ProcessInput()
 	m_mouseY += m_mouseState.lY;
 
 	// 마우스 위치가 화면 너비 또는 높이를 초과하지 않는지 확인합니다.
-	if (m_mouseX < 0) { m_mouseX = 0; }
-	if (m_mouseY < 0) { m_mouseY = 0; }
+	if (m_mouseX < m_minimumX) 
+	{ 
+		m_mouseX = m_minimumX; 
+	}
+	if (m_mouseY < m_minimumY)
+	{ 
+		m_mouseY = m_minimumY;
+	}
 
-	if (m_mouseX > m_screenWidth) { m_mouseX = m_screenWidth; }
-	if (m_mouseY > m_screenHeight) { m_mouseY = m_screenHeight; }
+	if (m_mouseX > m_minimumX + m_screenWidth) 
+	{ 
+		m_mouseX = m_minimumX + m_screenWidth; 
+	}
+	if (m_mouseY > m_minimumY + m_screenHeight)
+	{ 
+		m_mouseY = m_minimumY + m_screenHeight;
+	}
+}
+
+void InputSystem::SetMinimum(int xPos, int yPos)
+{
+	m_minimumX = xPos;
+	m_minimumY = yPos;
+}
+
+void InputSystem::SetMouseLocation(int xPos, int yPos)
+{
+	m_mouseX = xPos;
+	m_mouseY = yPos;
 }
 
 void InputSystem::GetMouseLocation(int& mouseX, int& mouseY)
@@ -255,6 +283,16 @@ bool InputSystem::GetKey(char& key)
 bool InputSystem::IsEscapePressed()
 {
 	if (m_keyboardState[DIK_ESCAPE] & 0x80)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+bool InputSystem::IsEnterPressed()
+{
+	if (m_keyboardState[DIK_RETURN] & 0x80)
 	{
 		return true;
 	}

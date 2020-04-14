@@ -12,27 +12,31 @@ class D3DClass;
 class CameraClass;
 class TextureShaderClass;
 class TransparentShaderClass;
-class BitmapClass;
 class SystemFrame;
 
 class GraphicsClass
 {
-public:
+private:
+	static GraphicsClass* Inst;
 	GraphicsClass();
-	GraphicsClass(const GraphicsClass&);
-	~GraphicsClass();
-
-	bool Initialize(int, int, HWND);
-	void Shutdown();
-	bool Render(SystemFrame*, int, int);
-
-	void LoadData();
-	TextureShaderClass* GetTextureShaderClass();
-	TransparentShaderClass* GetTransparentShaderClass();
 private:
 	D3DClass* m_Direct3D = nullptr;
 	CameraClass* m_Camera = nullptr;
 	TextureShaderClass* m_TextureShader = nullptr;
 	TransparentShaderClass* m_TransparentShader = nullptr;
-	BitmapClass* m_cursor = nullptr;
+public:
+	static GraphicsClass* getInstance();
+
+	bool Initialize(int, int, HWND);
+	void Shutdown();
+	bool Render(SystemFrame*);
+
+	ID3D11Device* GetDevice();
+	ID3D11DeviceContext* GetDeviceContext();
+	TextureShaderClass* GetTextureShaderClass();
+	TransparentShaderClass* GetTransparentShaderClass();
+
+	void SetCameraPosition(float, float);
+
+	~GraphicsClass();
 };

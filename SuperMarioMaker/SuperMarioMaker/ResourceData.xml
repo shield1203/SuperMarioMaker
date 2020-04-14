@@ -45,15 +45,85 @@
     </Type>
   </Player>
 
+  <Object>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object00.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object01.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object02.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object03.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object04_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object04_1.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object04_2.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object04_3.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object05_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object05_1.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object05_2.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object05_3.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object05_4.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object06_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object06_1.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object06_2.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="22" Right ="90" Top="0" Bottom ="45" time ="0">Texture/Object/object06_3.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="45" time ="0">Texture/Object/object06_4.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="68" Top="0" Bottom ="45" time ="0">Texture/Object/object06_5.png</ImagePath>
+    </SpriteData>
+  </Object>
+
+  <Tile>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Tile/tile00_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Tile/tile00_1.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Tile/tile00_2.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Tile/tile01_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Tile/tile01_1.png</ImagePath>
+    </SpriteData>
+  </Tile>
+
+  <Item>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Item/item00.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Item/item01.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Item/item02.png</ImagePath>
+    </SpriteData>
+  </Item>
+
+  <Enemy>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Enemy/enemy00.png</ImagePath>
+    </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Enemy/enemy01_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Enemy/enemy01_1.png</ImagePath>
+    </SpriteData>
+  </Enemy>
+  
   <LoginSystem>
     <BackgroundData>
       <ImagePath width ="1100" height ="700">Texture/Login/background.png</ImagePath>
     </BackgroundData>
-    <ButtonData xPos ="690" yPos ="315">
+    <ButtonData xPos ="690" yPos ="315" state ="0">
       <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/create_id_on.png</ImagePath>
       <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/create_id_off.png</ImagePath>
     </ButtonData>
-    <ButtonData xPos ="690" yPos ="315">
+    <ButtonData xPos ="690" yPos ="315" state ="0">
       <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/game_start_on.png</ImagePath>
       <ImagePath width ="175" height ="60" Left ="0" Right ="175" Top="0" Bottom ="60" time ="0">Texture/Login/game_start_off.png</ImagePath>
     </ButtonData>
@@ -63,25 +133,185 @@
     <BackgroundData>
       <ImagePath width ="1100" height ="700">Texture/Title/background.png</ImagePath>
     </BackgroundData>
-    <ButtonData xPos ="765" yPos ="130">
+    <ButtonData xPos ="765" yPos ="130" state ="0">
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/create_map_on.png</ImagePath>
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/create_map_off.png</ImagePath>
     </ButtonData>
-    <ButtonData xPos ="765" yPos ="230">
+    <ButtonData xPos ="765" yPos ="230" state ="0">
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/single_play_on.png</ImagePath>
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/single_play_off.png</ImagePath>
     </ButtonData>
-    <ButtonData xPos ="765" yPos ="330">
+    <ButtonData xPos ="765" yPos ="330" state ="0">
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/multiplay_on.png</ImagePath>
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/multiplay_off.png</ImagePath>
     </ButtonData>
-    <ButtonData xPos ="765" yPos ="430">
+    <ButtonData xPos ="765" yPos ="430" state ="0">
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/upload_map_on.png</ImagePath>
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/upload_map_off.png</ImagePath>
     </ButtonData>
-    <ButtonData xPos ="765" yPos ="530">
+    <ButtonData xPos ="765" yPos ="530" state ="0">
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/download_map_on.png</ImagePath>
       <ImagePath width ="240" height ="49" Left ="0" Right ="240" Top="0" Bottom ="49" time ="0">Texture/Title/download_map_off.png</ImagePath>
     </ButtonData>
   </TitleSystem>
+
+  <MakerSystem>
+    <BackgroundData>
+      <ImagePath width ="4320" height ="1440">Texture/Maker/background.png</ImagePath>
+      <ImagePath width ="4320" height ="1440">Texture/Maker/collision.png</ImagePath>
+    </BackgroundData>
+    <ButtonData xPos ="0" yPos ="0" state ="1">
+      <ImagePath width ="1100" height ="90" Left ="0" Right ="1100" Top="0" Bottom ="90" time ="0">Texture/Maker/menubar00.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="0" yPos ="90" state ="1">
+      <ImagePath width ="180" height ="380" Left ="0" Right ="180" Top="0" Bottom ="380" time ="0">Texture/Maker/menubar01.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="0" yPos ="251" state ="0">
+      <ImagePath width ="1100" height ="198" Left ="0" Right ="1100" Top="0" Bottom ="198" time ="0">Texture/Maker/menubar02.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="15" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_change.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="8" yPos ="285" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_erase.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="97" yPos ="285" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_expand.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="8" yPos ="375" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_back.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="97" yPos ="375" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_save.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="513" yPos ="90" state ="1">
+      <ImagePath width ="75" height ="25" Left ="0" Right ="75" Top="0" Bottom ="25" time ="0">Texture/Maker/button00.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="513" yPos ="0" state ="0">
+      <ImagePath width ="75" height ="25" Left ="0" Right ="75" Top="0" Bottom ="25" time ="0">Texture/Maker/button01.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="180" yPos ="248" state ="1">
+      <ImagePath width ="25" height ="75" Left ="0" Right ="25" Top="0" Bottom ="75" time ="0">Texture/Maker/button02.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="0" yPos ="248" state ="0">
+      <ImagePath width ="25" height ="75" Left ="0" Right ="25" Top="0" Bottom ="75" time ="0">Texture/Maker/button03.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="357" yPos ="475" state ="0">
+      <ImagePath width ="150" height ="66" Left ="0" Right ="150" Top="0" Bottom ="66" time ="0">Texture/Maker/button04.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="593" yPos ="475" state ="0">
+      <ImagePath width ="150" height ="66" Left ="0" Right ="150" Top="0" Bottom ="66" time ="0">Texture/Maker/button05.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="0" yPos ="0" state ="0">
+      <ImagePath width ="90" height ="90" Left ="23" Right ="68" Top="23" Bottom ="68" time ="0">Texture/Maker/button06.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="125" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_object00.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="220" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_object01.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="315" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_object02.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="410" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_object03.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="505" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_object04.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="600" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_object05.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="695" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_object06.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="790" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_tile00.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="885" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_tile01.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="980" yPos ="8" state ="1">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_item00.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="125" yPos ="8" state ="0">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_item01.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="220" yPos ="8" state ="0">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_item02.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="315" yPos ="8" state ="0">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_enemy00.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="410" yPos ="8" state ="0">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Maker/button_enemy01.png</ImagePath>
+    </ButtonData>
+  </MakerSystem>
+
+  <UploadSystem>
+    <BackgroundData>
+      <ImagePath width ="1100" height ="700">Texture/Upload/background.png</ImagePath>
+    </BackgroundData>
+    <ButtonData xPos ="20" yPos ="20" state ="0">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Upload/button_back_on.png</ImagePath>
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Upload/button_back_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="235" yPos ="160" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map00_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map00_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="816" yPos ="160" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map01_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map01_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="235" yPos ="380" state ="0">
+      <ImagePath width ="60" height ="60" Left ="0" Right ="60" Top="0" Bottom ="60" time ="0">Texture/Upload/button_level00_on.png</ImagePath>
+      <ImagePath width ="60" height ="60" Left ="0" Right ="60" Top="0" Bottom ="60" time ="0">Texture/Upload/button_level00_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="805" yPos ="380" state ="0">
+      <ImagePath width ="60" height ="60" Left ="0" Right ="60" Top="0" Bottom ="60" time ="0">Texture/Upload/button_level01_on.png</ImagePath>
+      <ImagePath width ="60" height ="60" Left ="0" Right ="60" Top="0" Bottom ="60" time ="0">Texture/Upload/button_level01_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="443" yPos ="550" state ="0">
+      <ImagePath width ="214" height ="64" Left ="0" Right ="214" Top="0" Bottom ="64" time ="0">Texture/Upload/button_upload_on.png</ImagePath>
+      <ImagePath width ="214" height ="64" Left ="0" Right ="214" Top="0" Bottom ="64" time ="0">Texture/Upload/button_upload_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="375" yPos ="380" state ="1">
+      <ImagePath width ="57" height ="54" Left ="0" Right ="57" Top="0" Bottom ="54" time ="0">Texture/Upload/level.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="106" yPos ="238" state ="0">
+      <ImagePath width ="888" height ="272" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Upload/button_fail.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="106" yPos ="238" state ="0">
+      <ImagePath width ="888" height ="272" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Upload/button_success.png</ImagePath>
+    </ButtonData>
+  </UploadSystem>
+
+  <DownloadSystem>
+    <BackgroundData>
+      <ImagePath width ="1100" height ="700">Texture/Download/background.png</ImagePath>
+    </BackgroundData>
+    <ButtonData xPos ="20" yPos ="20" state ="0">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Upload/button_back_on.png</ImagePath>
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Upload/button_back_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="35" yPos ="320" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Download/button_map00_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Download/button_map00_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="1016" yPos ="320" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Download/button_map01_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Download/button_map01_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="820" yPos ="160" state ="1">
+      <ImagePath width ="117" height ="35" Left ="0" Right ="117" Top="0" Bottom ="35" time ="0">Texture/Download/button_download.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="106" yPos ="238" state ="0">
+      <ImagePath width ="888" height ="272" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Download/button_fail.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="106" yPos ="238" state ="0">
+      <ImagePath width ="888" height ="272" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Download/button_success.png</ImagePath>
+    </ButtonData>
+  </DownloadSystem>
 </Resource>

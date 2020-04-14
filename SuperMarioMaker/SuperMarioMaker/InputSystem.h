@@ -18,6 +18,8 @@ private:
 
 	int m_screenWidth = 0;
 	int m_screenHeight = 0;
+	int m_minimumX = 0;
+	int m_minimumY = 0;
 	int m_mouseX = 0;
 	int m_mouseY = 0;
 
@@ -33,12 +35,15 @@ public:
 	bool ReadMouse();
 	void ProcessInput();
 
+	void SetMinimum(int, int);
+	void SetMouseLocation(int, int);
 	void GetMouseLocation(int&, int&);
 	bool IsLeftMouseButtonDown();
 
 	bool GetKey(char&);
 
 	bool IsEscapePressed();
+	bool IsEnterPressed();
 	bool IsLeftArrowPressed();
 	bool IsRightArrowPressed();
 	bool IsUpArrowPressed();

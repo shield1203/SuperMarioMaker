@@ -1,18 +1,11 @@
 ﻿#include "stdafx.h"
-#include "cameraclass.h"
-
+#include "Cameraclass.h"
 
 CameraClass::CameraClass()
 {
 	m_position = XMFLOAT3(0.0f, 0.0f, 0.0f);;
 	m_rotation = XMFLOAT3(0.0f, 0.0f, 0.0f);
 }
-
-
-CameraClass::CameraClass(const CameraClass& other)
-{
-}
-
 
 CameraClass::~CameraClass()
 {

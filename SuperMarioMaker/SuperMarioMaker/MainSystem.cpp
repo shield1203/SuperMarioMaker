@@ -8,6 +8,9 @@
 #include "SystemFrame.h"
 #include "LoginSystem.h"
 #include "TitleSystem.h"
+#include "MakerSystem.h"
+#include "UploadSystem.h"
+#include "DownloadSystem.h"
 
 #include "ResourceManager.h"
 #include "TextManager.h"
@@ -27,7 +30,7 @@ bool MainSystem::InitializeMainSystem()
 
 	InitializeWindows(screenWidth, screenHeight);
 
-	m_GraphicsClass = new GraphicsClass;
+	m_GraphicsClass = GraphicsClass::getInstance();
 	if (!m_GraphicsClass->Initialize(screenWidth, screenHeight, m_hwnd))
 	{
 		return false;
@@ -43,10 +46,9 @@ bool MainSystem::InitializeMainSystem()
 	m_gmaeStep = GAME_STEP::STEP_LOGIN;
 	m_resourceManager = ResourceManager::getInstance();
 	m_textManager = TextManager::getInstance();
-	m_GraphicsClass->LoadData();
 
 	m_systemFrame = new LoginSystem();
-	m_systemFrame->Initiallize(m_GraphicsClass->GetTextureShaderClass(), m_GraphicsClass->GetTransparentShaderClass());
+	m_systemFrame->Initiallize();
 
 	return true;
 }
@@ -118,28 +120,30 @@ void MainSystem::Initialize()
 		case GAME_STEP::STEP_TITLE:
 			m_systemFrame = new TitleSystem();
 			break;
+		case GAME_STEP::STEP_MAKER:
+			m_systemFrame = new MakerSystem();
+			break;
+		case GAME_STEP::STEP_UPLOAD:
+			m_systemFrame = new UploadSystem();
+			break;
+		case GAME_STEP::STEP_DOWNLOAD:
+			m_systemFrame = new DownloadSystem();
+			break;
 		}
 
-		m_systemFrame->Initiallize(m_GraphicsClass->GetTextureShaderClass(), m_GraphicsClass->GetTransparentShaderClass());
-		m_GraphicsClass->LoadData();
+		m_systemFrame->Initiallize();
 	}
-	
 }
 
 void MainSystem::Update()
 {
 	m_inputSystem->Update();
-
 	m_systemFrame->Update();
 }
 
 bool MainSystem::Render()
 {
-	int cursorXPos = 0;
-	int cursorYPos = 0;
-	m_inputSystem->GetMouseLocation(cursorXPos, cursorYPos);
-
-	return m_GraphicsClass->Render(m_systemFrame, cursorXPos, cursorYPos);
+	return m_GraphicsClass->Render(m_systemFrame);
 }
 
 void MainSystem::InitializeWindows(int& screenWidth, int& screenHeight)

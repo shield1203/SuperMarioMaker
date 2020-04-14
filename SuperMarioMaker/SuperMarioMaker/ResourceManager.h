@@ -28,6 +28,8 @@ private:
 public:
 	GAME_STEP m_curGameStep;
 	string m_curStepString;
+	
+	BitmapClass* m_cursor = nullptr;
 
 	vector<BitmapClass*>m_background;
 
@@ -35,24 +37,25 @@ public:
 
 	vector<PlayerSprite*>m_playerSprite;
 
-	vector<Sprite*>m_monsterSprite;
-	vector<Sprite*>m_tileSprite;
 	vector<Sprite*>m_objectSprite;
+	vector<Sprite*>m_tileSprite;
 	vector<Sprite*>m_itemSprite;
+	vector<Sprite*>m_enemySprite;
 public:
 	static ResourceManager* getInstance();
 
-	void LoadCursorBitmap(ID3D11Device*, BitmapClass*);
-	void LoadGameData(ID3D11Device*);
+	void LoadCursorBitmap(ID3D11Device*);
+	void LoadGameData(ID3D11Device*, GAME_STEP);
 	void LoadBackgroundData(ID3D11Device*);
 	void LoadButton(ID3D11Device*);
 	void LoadPlayerSprite(ID3D11Device*);
+	void LoadMapSprite(ID3D11Device*, string);
 
 	void ReleaseData(GAME_STEP);
 	void ReleaseBackground();
 	void ReleaseButton();
 	void ReleasePlayer();
-	void ReleaseMap();
+	void ReleaseMapSprite();
 
 	~ResourceManager();
 };

@@ -1,29 +1,31 @@
 #include "stdafx.h"
 #include "d3dclass.h"
-#include "cameraclass.h"
+#include "CameraClass.h"
 #include "textureshaderclass.h"
 #include "TransparentShaderClass.h"
-#include "BitmapClass.h"
 #include "TextManager.h"
 #include "TextClass.h"
 #include "Graphicsclass.h"
 #include "SystemFrame.h"
-#include "ResourceManager.h"
+
+GraphicsClass* GraphicsClass::Inst = nullptr;
+
+GraphicsClass* GraphicsClass::getInstance()
+{
+	if (Inst == nullptr) {
+		Inst = new GraphicsClass();
+	}
+
+	return Inst;
+}
 
 GraphicsClass::GraphicsClass()
 {
 }
 
-
-GraphicsClass::GraphicsClass(const GraphicsClass& other)
-{
-}
-
-
 GraphicsClass::~GraphicsClass()
 {
 }
-
 
 bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 {
@@ -42,7 +44,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	}
 
 	// m_Camera °´Ã¼ »ý¼º
-	m_Camera = new CameraClass;
+	m_Camera = new CameraClass();
 	if (!m_Camera)
 	{
 		return false;
@@ -68,25 +70,19 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 		return false;
 	}
 
-	// Åõ¸íÇÑ ¼ÎÀÌ´õ °³Ã¼¸¦ ¸¸µì´Ï´Ù.
+	// TransparentShaderClass °´Ã¼»ý¼º
 	m_TransparentShader = new TransparentShaderClass;
 	if (!m_TransparentShader)
 	{
 		return false;
 	}
 
-	// Åõ¸í ½¦ÀÌ´õ °´Ã¼¸¦ ÃÊ±âÈ­ÇÕ´Ï´Ù.
+	// TransparentShaderClass °´Ã¼¸¦ ÃÊ±âÈ­ÇÕ´Ï´Ù.
 	if (!m_TransparentShader->Initialize(m_Direct3D->GetDevice(), hwnd))
 	{
 		MessageBox(hwnd, L"Could not initialize the transparent shader object.", L"Error", MB_OK);
 		return false;
 	}
-
-	// ºñÆ®¸Ê °´Ã¼ »ý¼º
-	m_cursor = new BitmapClass;
-
-	// ºñÆ®¸Ê °´Ã¼ ÃÊ±âÈ­
-	ResourceManager::getInstance()->LoadCursorBitmap(m_Direct3D->GetDevice(), m_cursor);
 
 	// Text °´Ã¼
 	TextManager::getInstance()->m_textClass = new TextClass();
@@ -95,44 +91,22 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 	return true;
 }
 
-
 void GraphicsClass::Shutdown()
 {
-	// m_Bitmap °´Ã¼ ¹ÝÈ¯
-	if (m_cursor)
-	{
-		m_cursor->Shutdown();
-		delete m_cursor;
-		m_cursor = 0;
-	}
+	m_TextureShader->Shutdown();
+	SafeDelete(m_TextureShader);
 
-	// m_TextureShader °´Ã¼ ¹ÝÈ¯
-	if (m_TextureShader)
-	{
-		m_TextureShader->Shutdown();
-		delete m_TextureShader;
-		m_TextureShader = 0;
-	}
+	m_TransparentShader->Shutdown();
+	SafeDelete(m_TransparentShader);
 
-	// m_Camera °´Ã¼ ¹ÝÈ¯
-	if (m_Camera)
-	{
-		delete m_Camera;
-		m_Camera = 0;
-	}
+	SafeDelete(m_Camera);
 
-	// Direct3D °´Ã¼ ¹ÝÈ¯
-	if (m_Direct3D)
-	{
-		m_Direct3D->Shutdown();
-		delete m_Direct3D;
-		m_Direct3D = 0;
-	}
+	m_Direct3D->Shutdown();
+	SafeDelete(m_Direct3D);
 }
 
-bool GraphicsClass::Render(SystemFrame* systemFrame, int cursorXPos, int cursorYPos)
+bool GraphicsClass::Render(SystemFrame* systemFrame)
 {
-	float blendAmount = 1.0f;
 	// ¾ÀÀ» ±×¸®±â À§ÇØ ¹öÆÛ¸¦ Áö¿ó´Ï´Ù
 	m_Direct3D->BeginScene(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -153,18 +127,8 @@ bool GraphicsClass::Render(SystemFrame* systemFrame, int cursorXPos, int cursorY
 	// Åõ¸íµµ°¡ ÀÛµ¿ÇÏµµ·Ï ¾ËÆÄ ºí·»µå¸¦ ÄÕ´Ï´Ù.
 	m_Direct3D->TurnOnAlphaBlending();
 
-	systemFrame->Render(m_Direct3D->GetDeviceContext(), worldMatrix, viewMatrix, orthoMatrix);
-
-	if (!m_cursor->Render(m_Direct3D->GetDeviceContext(), cursorXPos, cursorYPos))
-	{
-		return false;
-	}
-
-
-	if (!m_TransparentShader->Render(m_Direct3D->GetDeviceContext(), m_cursor->GetIndexCount(), worldMatrix, viewMatrix, orthoMatrix, m_cursor->GetTexture(), blendAmount))
-	{
-		return false;
-	}
+	// CurGameStep Render
+	systemFrame->Render(worldMatrix, viewMatrix, orthoMatrix);
 
 	// ¾ËÆÄ ºí·»µùÀ» ²ü´Ï´Ù.
 	m_Direct3D->TurnOffAlphaBlending();
@@ -178,9 +142,14 @@ bool GraphicsClass::Render(SystemFrame* systemFrame, int cursorXPos, int cursorY
 	return true;
 }
 
-void GraphicsClass::LoadData()
+ID3D11Device* GraphicsClass::GetDevice()
 {
-	ResourceManager::getInstance()->LoadGameData(m_Direct3D->GetDevice());
+	return m_Direct3D->GetDevice();
+}
+
+ID3D11DeviceContext* GraphicsClass::GetDeviceContext()
+{
+	return m_Direct3D->GetDeviceContext();
 }
 
 TextureShaderClass* GraphicsClass::GetTextureShaderClass()
@@ -191,4 +160,9 @@ TextureShaderClass* GraphicsClass::GetTextureShaderClass()
 TransparentShaderClass* GraphicsClass::GetTransparentShaderClass()
 {
 	return m_TransparentShader;
+}
+
+void GraphicsClass::SetCameraPosition(float xPos, float yPos)
+{
+	m_Camera->SetPosition(xPos, yPos, -6.0f);
 }

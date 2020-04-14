@@ -14,8 +14,6 @@ LoginCursor::LoginCursor()
 	m_textManager = TextManager::getInstance();
 	m_inputSystem = InputSystem::getInstance();
 	m_httpSystem = new HttpSystem();
-
-	m_click = false;
 }
 
 LoginCursor::~LoginCursor()
@@ -80,6 +78,7 @@ void LoginCursor::CreateID()
 	if (m_resourceManager->m_buttonSprite[LOGIN::LOGIN_CREATE_ID_BT]->state == BUTTON_STATE::BUTTON_ON)
 	{
 		m_httpSystem->RequestCreateId(m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_NICKNAME]->text);
+		
 		if (m_textManager->m_result == "Create_Success")
 		{
 			m_httpSystem->RequestGetId(m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_NICKNAME]->text);
@@ -88,20 +87,22 @@ void LoginCursor::CreateID()
 				m_state = LOGIN::LOGIN_GAME_START_BT;
 
 				m_textManager->m_id = m_textManager->m_result;
-				m_textManager->m_result = m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_NICKNAME]->text;
-				m_textManager->m_result.append(" : Login Success!");
-
-				m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_RESULT]->text = m_textManager->m_result;
 				m_textManager->m_nickName = m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_NICKNAME]->text;
+
+				m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_RESULT]->text = m_textManager->m_nickName;
+				m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_RESULT]->text.append(" : Login Success!");
 				m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_NICKNAME]->text = "";
 
 				m_textManager->SaveUserData();
 			}
 		}
-
-		m_textManager->UpdateText(LOGIN_TEXT::LOGIN_TEXT_NICKNAME);
-		m_textManager->UpdateText(LOGIN_TEXT::LOGIN_TEXT_RESULT);
+		else
+		{
+			m_textManager->m_textData[LOGIN_TEXT::LOGIN_TEXT_RESULT]->text = m_textManager->m_result;
+		}
 	}
+	m_textManager->UpdateText(LOGIN_TEXT::LOGIN_TEXT_NICKNAME);
+	m_textManager->UpdateText(LOGIN_TEXT::LOGIN_TEXT_RESULT);
 }
 
 void LoginCursor::ChangeGameStep()

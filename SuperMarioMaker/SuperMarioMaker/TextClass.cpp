@@ -32,7 +32,7 @@ bool TextClass::Initialize(ID3D11Device* device, ID3D11DeviceContext* deviceCont
 		return false;
 	}
 
-	if (!m_Font->Initialize(m_device, "Texture/fontdata.txt", L"Texture/font.dds"))
+	if (!m_Font->Initialize(m_device, "Texture/fontdata.txt", L"Texture/font.png"))
 	{
 		MessageBox(hwnd, L"Could not initialize the font object.", L"Error", MB_OK);
 		return false;
@@ -80,7 +80,6 @@ void TextClass::Shutdown()
 
 bool TextClass::Render(unsigned int sentenceNum, XMMATRIX worldMatrix, XMMATRIX orthoMatrix)
 {
-	worldMatrix = XMMatrixScaling(2, 2, 0);
 	if (!RenderSentence(m_deviceContext, m_sentence[sentenceNum], worldMatrix, orthoMatrix))
 	{
 		return false;

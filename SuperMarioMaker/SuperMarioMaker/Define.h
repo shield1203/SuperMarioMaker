@@ -4,6 +4,9 @@
 #define WIN_SIZE_HEIGHT 700
 #define SERVER_IP "203.232.193.170"
 #define HTTP_PORT 3000
+#define MAX_MSG_LEN 2937
+#define MAX_DATA_LEN 2929
+#define PORT_NUM 8000
 
 /////////////
 // LINKING //
@@ -24,7 +27,6 @@
 #include <d3dcompiler.h>
 #include <directxmath.h>
 #include "WICTextureLoader.h"
-#include "DDSTextureLoader.h"
 using namespace DirectX;
 
 //////////////

@@ -28,6 +28,10 @@ void UploadSystem::Initiallize()
 	m_textManager->LoadData(GAME_STEP::STEP_UPLOAD);
 
 	m_uploadCursor = new UploadCursor();
+	if (m_textManager->m_textData.size() == 1)
+	{
+		m_uploadCursor->m_mapName = 0;
+	}
 }
 
 void UploadSystem::Update()

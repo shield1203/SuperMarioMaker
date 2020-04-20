@@ -9,7 +9,7 @@ TitleCursor::TitleCursor()
 	m_resourceManager = ResourceManager::getInstance();
 	m_inputSystem = InputSystem::getInstance();
 
-	m_click = false;
+	m_click = true;
 }
 
 TitleCursor::~TitleCursor()
@@ -20,14 +20,11 @@ void TitleCursor::Update()
 {
 	CheckCursorLocation();
 
-	if (m_inputSystem->IsLeftMouseButtonDown())
+	if (!m_click && m_inputSystem->IsLeftMouseButtonDown())
 	{
-		if (!m_click)
-		{
-			m_click = true;
+		m_click = true;
 
-			ChangeGameStep();
-		}
+		ChangeGameStep();
 	}
 
 	if (!m_inputSystem->IsLeftMouseButtonDown())
@@ -79,7 +76,7 @@ void TitleCursor::ChangeGameStep()
 				//m_resourceManager->m_curGameStep = GAME_STEP::STEP_SINGLE_PLAY;
 				break;
 			case TITLE::TITLE_MULTIPLAY_BT:
-				//m_resourceManager->m_curGameStep = GAME_STEP::STEP_TEAM;
+				m_resourceManager->m_curGameStep = GAME_STEP::STEP_MULTIPLAY_LOGIN;
 				break;
 			case TITLE::TITLE_UPLOAD_MAP_BT:
 				m_resourceManager->m_curGameStep = GAME_STEP::STEP_UPLOAD;

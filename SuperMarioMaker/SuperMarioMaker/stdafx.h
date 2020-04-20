@@ -2,7 +2,7 @@
 
 #define _WIN32_WINNT 0x0600
 #define MAX_LOADSTRING 100
-#define MAX_TEXT 40
+#define MAX_TEXT 50
 #define MAX_MAP_WIDTH 4320
 #define MAX_MAP_HEIGHT 1440
 

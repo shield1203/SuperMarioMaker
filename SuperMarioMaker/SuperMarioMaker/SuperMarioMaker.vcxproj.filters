@@ -106,9 +106,6 @@
     <Filter Include="소스 파일\03.DirectX11Class\03.Text\00.Font">
       <UniqueIdentifier>{8281f3e6-2682-4be0-933b-ee4308651f65}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\03.DirectX11Class\03.Text\01.TextureLoader">
-      <UniqueIdentifier>{951ea470-ee37-4909-9920-80f308658e62}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\04.Systems\01.LoginSystem\01.NIcknameTextBox">
       <UniqueIdentifier>{773965f1-2de5-4b90-91b3-6fc62d69fa0d}</UniqueIdentifier>
     </Filter>
@@ -117,9 +114,6 @@
     </Filter>
     <Filter Include="소스 파일\04.Systems\03.MakerSystem\01.MakerMap">
       <UniqueIdentifier>{42be48dc-bc62-4a57-9aab-94491fa3a71f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\04.Systems\05.MultiPlaySystem">
-      <UniqueIdentifier>{86b32cc8-4a56-45d0-ac31-48f615ed24e7}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\04.Systems\06.UploadSystem">
       <UniqueIdentifier>{623b1552-906d-47be-bd45-198625ef86c8}</UniqueIdentifier>
@@ -133,15 +127,42 @@
     <Filter Include="소스 파일\04.Systems\07.DownloadSystem\00.DownloadCursor">
       <UniqueIdentifier>{d70d249d-3acc-4b1a-a7b0-f89dce7fb938}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay">
+      <UniqueIdentifier>{86b32cc8-4a56-45d0-ac31-48f615ed24e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\05.SocketManager">
+      <UniqueIdentifier>{24f87e94-f2a2-4a70-8a22-90f04bd90ee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Utilty\06.PacketManager">
+      <UniqueIdentifier>{6451f2fd-ce7e-40d1-a59b-1add14c0cc70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay\01.LobbySystem">
+      <UniqueIdentifier>{e9be0456-6120-4eed-9da8-68950b9380d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay\01.LobbySystem\00.LobbyCursor">
+      <UniqueIdentifier>{9cf85d61-e8f1-4240-a796-1ae3b3ae1839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay\00.MultiPlayLoginSystem">
+      <UniqueIdentifier>{b00c8f06-524e-4cd3-8404-f847a2a59435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay\02.RoomSystem">
+      <UniqueIdentifier>{bd2a6247-22b3-4c0c-b12a-58526f16cfcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay\03.TeamPlaySystem">
+      <UniqueIdentifier>{c3b81781-a77e-4a87-83c7-6231e01606d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay\01.LobbySystem\01.SelectMapCursor">
+      <UniqueIdentifier>{d527593b-a2c2-46da-9176-68ca0232d5be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.Systems\05.MultiPlay\02.RoomSystem\00.RoomCursor">
+      <UniqueIdentifier>{63a2a262-2ada-447e-843a-ab1621993ad2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SuperMarioMaker.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Define.h">
@@ -228,9 +249,6 @@
     <ClInclude Include="FontShaderClass.h">
       <Filter>소스 파일\03.DirectX11Class\04.Shader\02.Font</Filter>
     </ClInclude>
-    <ClInclude Include="DDSTextureLoader.h">
-      <Filter>소스 파일\03.DirectX11Class\03.Text\01.TextureLoader</Filter>
-    </ClInclude>
     <ClInclude Include="FontClass.h">
       <Filter>소스 파일\03.DirectX11Class\03.Text\00.Font</Filter>
     </ClInclude>
@@ -260,6 +278,33 @@
     </ClInclude>
     <ClInclude Include="DownloadCursor.h">
       <Filter>소스 파일\04.Systems\07.DownloadSystem\00.DownloadCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="LobbySystem.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\01.LobbySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketManager.h">
+      <Filter>소스 파일\05.Utilty\05.SocketManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperMarioMaker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManager.h">
+      <Filter>소스 파일\05.Utilty\06.PacketManager</Filter>
+    </ClInclude>
+    <ClInclude Include="LobbyCursor.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\01.LobbySystem\00.LobbyCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiPlayLoginSystem.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\00.MultiPlayLoginSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectMapCursor.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\01.LobbySystem\01.SelectMapCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomSystem.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomCursor.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem\00.RoomCursor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -344,9 +389,6 @@
     <ClCompile Include="FontShaderClass.cpp">
       <Filter>소스 파일\03.DirectX11Class\04.Shader\02.Font</Filter>
     </ClCompile>
-    <ClCompile Include="DDSTextureLoader.cpp">
-      <Filter>소스 파일\03.DirectX11Class\03.Text\01.TextureLoader</Filter>
-    </ClCompile>
     <ClCompile Include="FontClass.cpp">
       <Filter>소스 파일\03.DirectX11Class\03.Text\00.Font</Filter>
     </ClCompile>
@@ -377,6 +419,30 @@
     <ClCompile Include="DownloadCursor.cpp">
       <Filter>소스 파일\04.Systems\07.DownloadSystem\00.DownloadCursor</Filter>
     </ClCompile>
+    <ClCompile Include="LobbySystem.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\01.LobbySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketManager.cpp">
+      <Filter>소스 파일\05.Utilty\05.SocketManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketManager.cpp">
+      <Filter>소스 파일\05.Utilty\06.PacketManager</Filter>
+    </ClCompile>
+    <ClCompile Include="LobbyCursor.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\01.LobbySystem\00.LobbyCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiPlayLoginSystem.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\00.MultiPlayLoginSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectMapCursor.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\01.LobbySystem\01.SelectMapCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomSystem.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomCursor.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem\00.RoomCursor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SuperMarioMaker.rc">
@@ -391,9 +457,6 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="Icon.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="Texture\font.dds">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

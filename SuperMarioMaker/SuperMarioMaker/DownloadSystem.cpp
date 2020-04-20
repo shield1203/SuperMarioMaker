@@ -60,7 +60,7 @@ bool DownloadSystem::Render(XMMATRIX worldMatrix, XMMATRIX viewMatrix, XMMATRIX 
 			}
 			m_textManager->m_textClass->Render(i, worldMatrix, orthoMatrix);
 			auto button = m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT];
-			if (!button->image[0]->Render(GraphicsClass::getInstance()->GetDeviceContext(), button->xPos, button->yPos + (50 * count), worldMatrix, viewMatrix, orthoMatrix))
+			if (!button->image[0]->Render(GraphicsClass::getInstance()->GetDeviceContext(), button->xPos, m_textManager->m_textData[i]->yPos, worldMatrix, viewMatrix, orthoMatrix))
 			{
 				return false;
 			}
@@ -109,6 +109,6 @@ void DownloadSystem::Release()
 	SafeDelete(m_downloadCursor);
 	SafeDelete(m_httpSystem);
 
-	m_resourceManager->ReleaseData(GAME_STEP::STEP_UPLOAD);
+	m_resourceManager->ReleaseData(GAME_STEP::STEP_DOWNLOAD);
 	m_textManager->ReleaseTextData();
 }

@@ -85,21 +85,21 @@ void DownloadCursor::CheckCursorLocation()
 		count++;
 	}
 
-	m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->image[BUTTON_STATE::BUTTON_ON]->GetCollisionRECT(collision);
-	collision.left += m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->xPos;
-	collision.right += m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->xPos;
-	collision.top += m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->yPos;
-	collision.bottom += m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->yPos;
-
 	count = 0;
 	for (int i = m_page * 8; i < m_downloadButton.size(); i++)
 	{
+		m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->image[BUTTON_STATE::BUTTON_ON]->GetCollisionRECT(collision);
+		collision.left += m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->xPos;
+		collision.right += m_resourceManager->m_buttonSprite[DOWNLOAD::DOWNLOAD_BT]->xPos;
+		collision.top += TextManager::getInstance()->m_textData[i]->yPos;
+		collision.bottom += TextManager::getInstance()->m_textData[i]->yPos;
+
 		if (count == 7)
 		{
 			break;
 		}
 
-		if (collision.left <= cursorXPos && collision.right >= cursorXPos && (collision.top + (25 * count)) <= cursorYPos && (collision.bottom + (50 * count)) >= cursorYPos)
+		if (collision.left <= cursorXPos && collision.right >= cursorXPos && collision.top <= cursorYPos && collision.bottom >= cursorYPos)
 		{
 			m_downloadButton[i] = true;
 			break;

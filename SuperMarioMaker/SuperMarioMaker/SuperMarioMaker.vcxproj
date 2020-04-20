@@ -150,17 +150,24 @@
     <ClInclude Include="AlignedAllocationPolicy.h" />
     <ClInclude Include="BitmapClass.h" />
     <ClInclude Include="CameraClass.h" />
-    <ClInclude Include="DDSTextureLoader.h" />
     <ClInclude Include="DownloadCursor.h" />
     <ClInclude Include="DownloadSystem.h" />
     <ClInclude Include="FontClass.h" />
     <ClInclude Include="FontShaderClass.h" />
     <ClInclude Include="happyhttp.h" />
     <ClInclude Include="HttpSystem.h" />
+    <ClInclude Include="LobbyCursor.h" />
+    <ClInclude Include="LobbySystem.h" />
     <ClInclude Include="MakerMap.h" />
     <ClInclude Include="MakerCursor.h" />
     <ClInclude Include="MakerSystem.h" />
+    <ClInclude Include="MultiPlayLoginSystem.h" />
     <ClInclude Include="NicknameTextBox.h" />
+    <ClInclude Include="PacketManager.h" />
+    <ClInclude Include="RoomCursor.h" />
+    <ClInclude Include="RoomSystem.h" />
+    <ClInclude Include="SelectMapCursor.h" />
+    <ClInclude Include="SocketManager.h" />
     <ClInclude Include="TextClass.h" />
     <ClInclude Include="TextManager.h" />
     <ClInclude Include="LoginCursor.h" />
@@ -193,17 +200,24 @@
   <ItemGroup>
     <ClCompile Include="BitmapClass.cpp" />
     <ClCompile Include="CameraClass.cpp" />
-    <ClCompile Include="DDSTextureLoader.cpp" />
     <ClCompile Include="DownloadCursor.cpp" />
     <ClCompile Include="DownloadSystem.cpp" />
     <ClCompile Include="FontClass.cpp" />
     <ClCompile Include="FontShaderClass.cpp" />
     <ClCompile Include="happyhttp.cpp" />
     <ClCompile Include="HttpSystem.cpp" />
+    <ClCompile Include="LobbyCursor.cpp" />
+    <ClCompile Include="LobbySystem.cpp" />
     <ClCompile Include="MakerMap.cpp" />
     <ClCompile Include="MakerCursor.cpp" />
     <ClCompile Include="MakerSystem.cpp" />
+    <ClCompile Include="MultiPlayLoginSystem.cpp" />
     <ClCompile Include="NicknameTextBox.cpp" />
+    <ClCompile Include="PacketManager.cpp" />
+    <ClCompile Include="RoomCursor.cpp" />
+    <ClCompile Include="RoomSystem.cpp" />
+    <ClCompile Include="SelectMapCursor.cpp" />
+    <ClCompile Include="SocketManager.cpp" />
     <ClCompile Include="TextClass.cpp" />
     <ClCompile Include="TextManager.cpp" />
     <ClCompile Include="LoginCursor.cpp" />
@@ -237,7 +251,6 @@
     <Image Include="Icon.ico" />
     <Image Include="small.ico" />
     <Image Include="SuperMarioMaker.ico" />
-    <Image Include="Texture\font.dds" />
   </ItemGroup>
   <ItemGroup>
     <None Include="font.ps" />

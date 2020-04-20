@@ -9,6 +9,9 @@
 #include "LoginSystem.h"
 #include "TitleSystem.h"
 #include "MakerSystem.h"
+#include "MultiPlayLoginSystem.h"
+#include "LobbySystem.h"
+#include "RoomSystem.h"
 #include "UploadSystem.h"
 #include "DownloadSystem.h"
 
@@ -122,6 +125,15 @@ void MainSystem::Initialize()
 			break;
 		case GAME_STEP::STEP_MAKER:
 			m_systemFrame = new MakerSystem();
+			break;
+		case GAME_STEP::STEP_MULTIPLAY_LOGIN:
+			m_systemFrame = new MultiPlayLoginSystem();
+			break;
+		case GAME_STEP::STEP_LOBBY:
+			m_systemFrame = new LobbySystem();
+			break;
+		case GAME_STEP::STEP_ROOM:
+			m_systemFrame = new RoomSystem();
 			break;
 		case GAME_STEP::STEP_UPLOAD:
 			m_systemFrame = new UploadSystem();

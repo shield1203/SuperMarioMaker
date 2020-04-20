@@ -118,7 +118,10 @@ void UploadCursor::ButtonAct()
 				}
 				break;
 			case UPLOAD::UPLOAD_BT:
-				UploadMapData();
+				if (m_mapName != 0)
+				{
+					UploadMapData();
+				}
 				break;
 			}
 

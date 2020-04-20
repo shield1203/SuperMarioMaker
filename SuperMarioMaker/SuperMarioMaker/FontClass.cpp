@@ -165,11 +165,11 @@ void FontClass::BuildVertexArray(void* vertices, char* sentence, float drawX, fl
 			vertexPtr[index].texture = XMFLOAT2(m_Font[letter].left, 0.0f);
 			index++;
 
-			vertexPtr[index].position = XMFLOAT3((drawX + m_Font[letter].size), (drawY - 16), 0.0f);  // Bottom right.
+			vertexPtr[index].position = XMFLOAT3((drawX + m_Font[letter].size + 4), (drawY - 32), 0.0f);  // Bottom right.
 			vertexPtr[index].texture = XMFLOAT2(m_Font[letter].right, 1.0f);
 			index++;
 
-			vertexPtr[index].position = XMFLOAT3(drawX, (drawY - 16), 0.0f);  // Bottom left.
+			vertexPtr[index].position = XMFLOAT3(drawX, (drawY - 32), 0.0f);  // Bottom left.
 			vertexPtr[index].texture = XMFLOAT2(m_Font[letter].left, 1.0f);
 			index++;
 
@@ -178,16 +178,16 @@ void FontClass::BuildVertexArray(void* vertices, char* sentence, float drawX, fl
 			vertexPtr[index].texture = XMFLOAT2(m_Font[letter].left, 0.0f);
 			index++;
 
-			vertexPtr[index].position = XMFLOAT3(drawX + m_Font[letter].size, drawY, 0.0f);  // Top right.
+			vertexPtr[index].position = XMFLOAT3(drawX + m_Font[letter].size + 4, drawY, 0.0f);  // Top right.
 			vertexPtr[index].texture = XMFLOAT2(m_Font[letter].right, 0.0f);
 			index++;
 
-			vertexPtr[index].position = XMFLOAT3((drawX + m_Font[letter].size), (drawY - 16), 0.0f);  // Bottom right.
+			vertexPtr[index].position = XMFLOAT3((drawX + m_Font[letter].size + 4), (drawY - 32), 0.0f);  // Bottom right.
 			vertexPtr[index].texture = XMFLOAT2(m_Font[letter].right, 1.0f);
 			index++;
 
 			// Update the x location for drawing by the size of the letter and one pixel.
-			drawX = drawX + m_Font[letter].size + 1.0f;
+			drawX = drawX + m_Font[letter].size + 9.0f;
 		}
 	}
 }

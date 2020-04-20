@@ -1,24 +1,17 @@
 <?xml version="1.0" ?>
 <Text>
   <LoginSystem>
-    <TextData xPos ="475" yPos="325" r="1" g="1" b="1">Login_Result</TextData>
-    <TextData xPos ="475" yPos="350" r="1" g="1" b="1">Nick_name</TextData>
+    <TextData xPos ="380" yPos="295" r="1" g="1" b="1">Login_Result</TextData>
+    <TextData xPos ="380" yPos="345" r="1" g="1" b="1">Nick_name</TextData>
   </LoginSystem>
   <MakerSystem>
-    <TextData xPos ="505" yPos="330" r="1" g="1" b="1">What's your mapname?</TextData>
-    <TextData xPos ="525" yPos="360" r="1" g="1" b="1">MapName</TextData>
+    <TextData xPos ="420" yPos="305" r="1" g="1" b="1">What's your mapname?</TextData>
+    <TextData xPos ="515" yPos="355" r="1" g="1" b="1">MapName</TextData>
   </MakerSystem>
   <UploadSystem>
-    <TextData xPos ="525" yPos="265" r="1" g="1" b="1">file not found</TextData>
+    <TextData xPos ="493" yPos="176" r="1" g="1" b="1">file not found</TextData>
   </UploadSystem>
   <DownloadSystem>
-    <TextData xPos ="340" yPos="255" r="1" g="1" b="1">Map not found</TextData>
-    <TextData xPos ="340" yPos="280" r="1" g="1" b="1">Map not found</TextData>
-    <TextData xPos ="340" yPos="305" r="1" g="1" b="1">Map not found</TextData>
-    <TextData xPos ="340" yPos="330" r="1" g="1" b="1">Map not found</TextData>
-    <TextData xPos ="340" yPos="355" r="1" g="1" b="1">Map not found</TextData>
-    <TextData xPos ="340" yPos="380" r="1" g="1" b="1">Map not found</TextData>
-    <TextData xPos ="340" yPos="405" r="1" g="1" b="1">Map not found</TextData>
-    <TextData xPos ="340" yPos="430" r="1" g="1" b="1">Map not found</TextData>
+    <TextData xPos ="240" yPos="155" r="1" g="1" b="1">Map not found</TextData>
   </DownloadSystem>
 </Text>

@@ -4,6 +4,7 @@
 
 #include "happyhttp.h"
 #include "tinyxml.h"
+#include "PacketManager.h"
 
 
 TextManager* TextManager::Inst = nullptr;
@@ -93,11 +94,12 @@ void TextManager::LoadData(GAME_STEP gameStep)
 		break;
 	case GAME_STEP::STEP_LOBBY:
 		m_curStepString = "LobbySystem";
+		SetLobbyRoomListTextData();
 		break;
 	case GAME_STEP::STEP_ROOM:
 		m_curStepString = "RoomSystem";
 		break;
-	case GAME_STEP::STEP_TEAM:
+	case GAME_STEP::STEP_TEAM_PLAY:
 		m_curStepString = "TeamPlaySystem";
 		break;
 	case GAME_STEP::STEP_UPLOAD:
@@ -202,8 +204,8 @@ void TextManager::ParseMapList()
 			addTextData->text.push_back(m_result[count]);
 			count++;
 		}
-		addTextData->xPos = 340;
-		addTextData->yPos = 255 +((num % 8) * 25);
+		addTextData->xPos = 140;
+		addTextData->yPos = 155 +((num % 8) * 50);
 		addTextData->red = 1;
 		addTextData->green = 1;
 		addTextData->blue = 1;
@@ -212,6 +214,40 @@ void TextManager::ParseMapList()
 		count++;
 		num++;
 	}
+}
+
+void TextManager::SetLobbyRoomListTextData()
+{
+	if (!m_textData.empty())
+	{
+		ReleaseTextData();
+	}
+
+	int count = 0;
+	for (auto lobbyRoom : PacketManager::getInstance()->m_lobbyRoomList)
+	{
+		TextData* addTextData = new TextData();
+		
+		addTextData->text += "Room_Data : ";
+		addTextData->text += lobbyRoom->ownerUserNickName;
+		addTextData->text += " : ";
+		addTextData->text += lobbyRoom->mapName;
+		addTextData->text += "  ";
+		addTextData->text += to_string(lobbyRoom->userCount);
+		addTextData->text += " / 4";
+
+		addTextData->xPos = 140;
+		addTextData->yPos = 155 + ((count % 8) * 50);
+		addTextData->red = 1;
+		addTextData->green = 1;
+		addTextData->blue = 1;
+
+		m_textData.push_back(addTextData);
+
+		count++;
+	}
+
+	SetTextData();
 }
 
 void TextManager::SetTextData()

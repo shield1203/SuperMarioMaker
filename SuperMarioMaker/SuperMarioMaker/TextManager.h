@@ -33,6 +33,7 @@ public:
 	void LoadTextData();
 	void LoadMapFileName();
 	void ParseMapList();
+	void SetLobbyRoomListTextData();
 
 	void SetTextData();
 	void UpdateText(unsigned int);

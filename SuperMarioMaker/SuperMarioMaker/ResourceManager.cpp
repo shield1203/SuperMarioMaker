@@ -88,11 +88,15 @@ void ResourceManager::LoadGameData(ID3D11Device* device, GAME_STEP gameStep)
 		break;
 	case GAME_STEP::STEP_LOBBY:
 		m_curStepString = "LobbySystem";
+		LoadBackgroundData(device);
+		LoadButton(device);
 		break;
 	case GAME_STEP::STEP_ROOM:
 		m_curStepString = "RoomSystem";
+		LoadBackgroundData(device);
+		LoadButton(device);
 		break;
-	case GAME_STEP::STEP_TEAM:
+	case GAME_STEP::STEP_TEAM_PLAY:
 		m_curStepString = "TeamPlaySystem";
 		break;
 	case GAME_STEP::STEP_UPLOAD:
@@ -349,12 +353,14 @@ void ResourceManager::ReleaseData(GAME_STEP gameStep)
 
 		break;
 	case GAME_STEP::STEP_LOBBY:
-		
+		ReleaseBackground();
+		ReleaseButton();
 		break;
 	case GAME_STEP::STEP_ROOM:
-		
+		ReleaseBackground();
+		ReleaseButton();
 		break;
-	case GAME_STEP::STEP_TEAM:
+	case GAME_STEP::STEP_TEAM_PLAY:
 		
 		break;
 	case GAME_STEP::STEP_UPLOAD:

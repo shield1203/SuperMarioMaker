@@ -41,6 +41,7 @@ public:
 	vector<Sprite*>m_tileSprite;
 	vector<Sprite*>m_itemSprite;
 	vector<Sprite*>m_enemySprite;
+
 public:
 	static ResourceManager* getInstance();
 

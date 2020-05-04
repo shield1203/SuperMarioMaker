@@ -157,6 +157,60 @@
     <Filter Include="소스 파일\04.Systems\05.MultiPlay\02.RoomSystem\00.RoomCursor">
       <UniqueIdentifier>{63a2a262-2ada-447e-843a-ab1621993ad2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\04.Systems\04.SinglePlaySystem\00.SinglePlayCursor">
+      <UniqueIdentifier>{cf756022-fbf0-4f89-b31f-840c56a426bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem">
+      <UniqueIdentifier>{8bf4202e-1fcb-40f3-b9d2-54fc6af73dd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\00.Player">
+      <UniqueIdentifier>{4aa6701f-8cfd-4372-a865-c23575c8ba7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object">
+      <UniqueIdentifier>{60fd3438-c731-4f90-a2bc-510c287825a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\00.SoftBlock">
+      <UniqueIdentifier>{b7585063-e380-4e09-a979-ae5156a94042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\02.Tile">
+      <UniqueIdentifier>{d2f11b1b-08fa-4ddf-b36c-5c9f454a7822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\03.Item">
+      <UniqueIdentifier>{ab442311-543a-4976-9fc0-ac9f0c868ff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\03.Item\00.Coin">
+      <UniqueIdentifier>{0bdb76f2-1576-4d21-b87a-7d88b860a513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\03.Item\01.Mushroom">
+      <UniqueIdentifier>{9e359f3d-4c7d-4908-bf69-95c3e03e4e87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\04.Enemy">
+      <UniqueIdentifier>{e645b5a7-634c-4e70-96aa-542e7bdfd8d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\04.Enemy\00.Goomba">
+      <UniqueIdentifier>{9f9193fc-3c1b-4c17-a21f-34111ea6db01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\01.ItemBox">
+      <UniqueIdentifier>{1ac87759-e4fe-4ca9-b83a-08dca235e63b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\02.Torn">
+      <UniqueIdentifier>{186cba4f-f3d0-404f-8352-0ee69471026f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\03.HardBlock">
+      <UniqueIdentifier>{66015715-3699-4074-96a8-524a5dc06a23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\04.Pipe">
+      <UniqueIdentifier>{1cb2f3f3-dcde-46aa-94fd-dbbb95c20a2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\05.Mushroom">
+      <UniqueIdentifier>{5269bc2b-dc59-4d62-9769-acc90047c701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\06.Bridge">
+      <UniqueIdentifier>{7b05c6d5-817a-497d-9902-3c3e8fc4f535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.MapSystem\01.Object\07.Goal">
+      <UniqueIdentifier>{64375b71-808d-4752-9578-8172ccf830fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -306,6 +360,69 @@
     <ClInclude Include="RoomCursor.h">
       <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem\00.RoomCursor</Filter>
     </ClInclude>
+    <ClInclude Include="ObjectFrame.h">
+      <Filter>소스 파일\06.MapSystem\01.Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftBlock.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\00.SoftBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\06.MapSystem\00.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglePlayCursor.h">
+      <Filter>소스 파일\04.Systems\04.SinglePlaySystem\00.SinglePlayCursor</Filter>
+    </ClInclude>
+    <ClInclude Include="TileFrame.h">
+      <Filter>소스 파일\06.MapSystem\02.Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemFrame.h">
+      <Filter>소스 파일\06.MapSystem\03.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Coin.h">
+      <Filter>소스 파일\06.MapSystem\03.Item\00.Coin</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyFrame.h">
+      <Filter>소스 파일\06.MapSystem\04.Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Goomba.h">
+      <Filter>소스 파일\06.MapSystem\04.Enemy\00.Goomba</Filter>
+    </ClInclude>
+    <ClInclude Include="HardBlock.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\03.HardBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamPlaySystem.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\03.TeamPlaySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Mushroom.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\05.Mushroom</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleMapSystem.h">
+      <Filter>소스 파일\06.MapSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamMapSystem.h">
+      <Filter>소스 파일\06.MapSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomMapSystem.h">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Pipe.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\04.Pipe</Filter>
+    </ClInclude>
+    <ClInclude Include="Bridge.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\06.Bridge</Filter>
+    </ClInclude>
+    <ClInclude Include="Mushroom_Big.h">
+      <Filter>소스 파일\06.MapSystem\03.Item\01.Mushroom</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemBox.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\01.ItemBox</Filter>
+    </ClInclude>
+    <ClInclude Include="Torn.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\02.Torn</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal.h">
+      <Filter>소스 파일\06.MapSystem\01.Object\07.Goal</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainSystem.cpp">
@@ -442,6 +559,69 @@
     </ClCompile>
     <ClCompile Include="RoomCursor.cpp">
       <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem\00.RoomCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFrame.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftBlock.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\00.SoftBlock</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\06.MapSystem\00.Player</Filter>
+    </ClCompile>
+    <ClCompile Include="SinglePlayCursor.cpp">
+      <Filter>소스 파일\04.Systems\04.SinglePlaySystem\00.SinglePlayCursor</Filter>
+    </ClCompile>
+    <ClCompile Include="TileFrame.cpp">
+      <Filter>소스 파일\06.MapSystem\02.Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemFrame.cpp">
+      <Filter>소스 파일\06.MapSystem\03.Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Coin.cpp">
+      <Filter>소스 파일\06.MapSystem\03.Item\00.Coin</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyFrame.cpp">
+      <Filter>소스 파일\06.MapSystem\04.Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Goomba.cpp">
+      <Filter>소스 파일\06.MapSystem\04.Enemy\00.Goomba</Filter>
+    </ClCompile>
+    <ClCompile Include="HardBlock.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\03.HardBlock</Filter>
+    </ClCompile>
+    <ClCompile Include="TeamPlaySystem.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\03.TeamPlaySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Mushroom.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\05.Mushroom</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleMapSystem.cpp">
+      <Filter>소스 파일\06.MapSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="TeamMapSystem.cpp">
+      <Filter>소스 파일\06.MapSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomMapSystem.cpp">
+      <Filter>소스 파일\04.Systems\05.MultiPlay\02.RoomSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Pipe.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\04.Pipe</Filter>
+    </ClCompile>
+    <ClCompile Include="Bridge.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\06.Bridge</Filter>
+    </ClCompile>
+    <ClCompile Include="Mushroom_Big.cpp">
+      <Filter>소스 파일\06.MapSystem\03.Item\01.Mushroom</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemBox.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\01.ItemBox</Filter>
+    </ClCompile>
+    <ClCompile Include="Torn.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\02.Torn</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal.cpp">
+      <Filter>소스 파일\06.MapSystem\01.Object\07.Goal</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

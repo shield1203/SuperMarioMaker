@@ -7,6 +7,8 @@
 MakerMap::MakerMap()
 {
 	m_resourceManager = ResourceManager::getInstance();
+
+	SetBase(); // 필수적으로 깔리는 오브젝트들
 }
 
 MakerMap::~MakerMap()
@@ -34,6 +36,67 @@ MakerMap::~MakerMap()
 		SafeDelete(data);
 	}
 	m_enemyData.clear();
+}
+
+void MakerMap::SetBase()
+{
+	// Object
+	for (int row = 14; row <= 15; row++)
+	{
+		for (int col = 0; col < 6; col++)
+		{
+			ObjectData* baseObject = new ObjectData;
+			baseObject->kind = OBJECT::OBJECT_HARDBLOCK;
+			baseObject->column = col;
+			baseObject->row = row;
+
+			m_objectData.push_back(baseObject);
+		}
+
+		for (int col = 38; col < 48; col++)
+		{
+			ObjectData* baseObject = new ObjectData;
+			baseObject->kind = OBJECT::OBJECT_HARDBLOCK;
+			baseObject->column = col;
+			baseObject->row = row;
+
+			m_objectData.push_back(baseObject);
+		}
+	}
+
+	ObjectData* objectGoal = new ObjectData;
+	objectGoal->kind = OBJECT::OBJECT_GOAL;
+	objectGoal->column = 39;
+	objectGoal->row = 3;
+	m_objectData.push_back(objectGoal);
+
+	ObjectData* objectBlock = new ObjectData;
+	objectBlock->kind = OBJECT::OBJECT_HARDBLOCK;
+	objectBlock->column = 39;
+	objectBlock->row = 13;
+	m_objectData.push_back(objectBlock);
+
+	// Tile
+	TileData* baseTile = new TileData;
+	baseTile->kind = TILE::TILE_TREE;
+	baseTile->column = 5;
+	baseTile->row = 12;
+	baseTile->height = 2;
+	m_tileData.push_back(baseTile);
+
+	// Item
+	ItemData* baseItem = new ItemData;
+	baseItem->kind = ITEM::ITEM_COIN;
+	baseItem->column = 6;
+	baseItem->row = 10;
+	m_itemData.push_back(baseItem);
+
+	// Enemy
+	EnemyData* baseEnemy = new EnemyData;
+	baseEnemy->kind = ENEMY::ENEMY_GOOMBA;
+	baseEnemy->column = 38;
+	baseEnemy->row = 13;
+	m_enemyData.push_back(baseEnemy);
 }
 
 void MakerMap::SetMap(MAKER selectedButton, int xPos, int yPos)
@@ -232,24 +295,33 @@ bool MakerMap::IsEnemyCollision(EnemyData addEnemy)
 
 void MakerMap::EraseObject(int column, int row)
 {
+	if (row == 14 || row == 15)
+	{
+		if (0 <= column && column < 6)
+		{
+			return;
+		}
+		else if (38 <= column && column <= 47)
+		{
+			return;
+		}
+	}
+
 	if (GetTickCount64() - m_time > 150)
 	{
 		m_time = GetTickCount64();
 
-		if (!m_objectData.empty())
+		for (int i = 0; i < m_objectData.size(); i++)
 		{
-			for (int i = 0; i < m_objectData.size(); i++)
+			if (column == m_objectData[i]->column && row == m_objectData[i]->row)
 			{
-				if (column == m_objectData[i]->column && row == m_objectData[i]->row)
-				{
-					SafeDelete(m_objectData[i]);
-					m_objectData.erase(m_objectData.begin() + i);
-					return;
-				}
+				SafeDelete(m_objectData[i]);
+				m_objectData.erase(m_objectData.begin() + i);
+				return;
 			}
 		}
 
-		if (!m_itemData.empty())
+		if (m_itemData.size() > 1)
 		{
 			for (int i = 0; i < m_objectData.size(); i++)
 			{
@@ -262,7 +334,7 @@ void MakerMap::EraseObject(int column, int row)
 			}
 		}
 
-		if (!m_enemyData.empty())
+		if (m_enemyData.size() > 1)
 		{
 			for (int i = 0; i < m_enemyData.size(); i++)
 			{
@@ -275,7 +347,7 @@ void MakerMap::EraseObject(int column, int row)
 			}
 		}
 
-		if (!m_tileData.empty())
+		if (m_tileData.size() > 1)
 		{
 			for (int i = 0; i < m_tileData.size(); i++)
 			{

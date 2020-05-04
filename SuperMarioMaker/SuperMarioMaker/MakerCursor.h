@@ -21,8 +21,8 @@ public:
 	bool m_click = false;
 	
 	int m_xPos = 0;
-	int m_yPos = 0;
-	int m_yMinimumYPos = 0;
+	int m_yPos = -740;
+	int m_yMinimumYPos = 740;
 
 	vector<MAKER>m_hideMenu0List;
 

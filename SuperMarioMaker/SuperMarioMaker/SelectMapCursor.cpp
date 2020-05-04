@@ -94,6 +94,7 @@ void SelectMapCursor::ButtonAct()
 				m_packetManager->m_lobbyData->ownerUserId = m_packetManager->m_userId;
 				strcpy(m_packetManager->m_lobbyData->mapName, TextManager::getInstance()->m_textData[m_mapName]->text.c_str());
 				m_packetManager->m_ownerUserId = m_packetManager->m_userId;
+				m_packetManager->LoadMapData(TextManager::getInstance()->m_textData[m_mapName]->text);
 				break;
 			case LOBBY::LOBBY_SELECT_MAP_CANCEL:
 				m_resourceManager->m_buttonSprite[LOBBY::LOBBY_SELECT_MAP]->state = BUTTON_STATE::BUTTON_OFF;

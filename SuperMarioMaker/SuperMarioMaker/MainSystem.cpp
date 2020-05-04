@@ -9,8 +9,10 @@
 #include "LoginSystem.h"
 #include "TitleSystem.h"
 #include "MakerSystem.h"
+#include "SinglePlaySystem.h"
 #include "MultiPlayLoginSystem.h"
 #include "LobbySystem.h"
+#include "RoomMapSystem.h"
 #include "RoomSystem.h"
 #include "UploadSystem.h"
 #include "DownloadSystem.h"
@@ -95,6 +97,9 @@ void MainSystem::Run()
 
 void MainSystem::Shutdown()
 {
+	m_systemFrame->Release();
+	SafeDelete(m_systemFrame);
+
 	m_GraphicsClass->Shutdown();
 	SafeDelete(m_GraphicsClass);
 
@@ -126,11 +131,18 @@ void MainSystem::Initialize()
 		case GAME_STEP::STEP_MAKER:
 			m_systemFrame = new MakerSystem();
 			break;
+		case GAME_STEP::STEP_SINGLE_PLAY:
+			m_systemFrame = new SinglePlaySystem();
+			break;
 		case GAME_STEP::STEP_MULTIPLAY_LOGIN:
 			m_systemFrame = new MultiPlayLoginSystem();
 			break;
 		case GAME_STEP::STEP_LOBBY:
 			m_systemFrame = new LobbySystem();
+			break;
+		case GAME_STEP::STEP_ROOM_UPLOAD:
+		case GAME_STEP::STEP_ROOM_DOWNLOAD:
+			m_systemFrame = new RoomMapSystem();
 			break;
 		case GAME_STEP::STEP_ROOM:
 			m_systemFrame = new RoomSystem();

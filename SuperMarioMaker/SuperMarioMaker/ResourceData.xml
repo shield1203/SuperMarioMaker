@@ -3,57 +3,241 @@
   <Cursor>
     <ImagePath width ="26" height ="27" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/cursor.png</ImagePath>
   </Cursor>
-  
+
   <Player>
     <Type characterType ="Mario">
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Small_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Small_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Small_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Small_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Small_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Small_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Small_R06.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Big_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Big_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Big_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Big_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Big_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Big_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Big_R06.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Fire_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Fire_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Fire_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Fire_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Fire_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Mario/Mario_Fire_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Mario/Mario_Fire_R06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Mario/Mario_Fire_L07.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Mario/Mario_Fire_R07.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Player/Mario/Mario_GameOver.png</ImagePath>
+      </SpriteData>
+    </Type>
+    <Type characterType ="Luigi">
+      <SpriteData>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Small_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Small_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Small_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Small_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Small_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Small_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Small_R06.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L02.png</ImagePath>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L03.png</ImagePath>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L04.png</ImagePath>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Big_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Big_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Big_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Big_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Big_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Big_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Big_R06.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R02.png</ImagePath>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R03.png</ImagePath>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R04.png</ImagePath>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Fire_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Fire_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Fire_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Fire_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Fire_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Luigi/Luigi_Fire_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Luigi/Luigi_Fire_R06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Luigi/Luigi_Fire_L07.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Luigi/Luigi_Fire_R07.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Player/Luigi/Luigi_GameOver.png</ImagePath>
+      </SpriteData>
+    </Type>
+    <Type characterType ="Toad">
+      <SpriteData>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Small_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Small_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Small_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Small_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Small_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Small_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Small_R06.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Big_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Big_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Big_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Big_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Big_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Big_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Big_R06.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_L07.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Fire_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Fire_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Fire_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Fire_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Fire_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toad/Toad_Fire_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toad/Toad_Fire_R06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Toad/Toad_Fire_L07.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Toad/Toad_Fire_R07.png</ImagePath>
       </SpriteData>
       <SpriteData>
-        <ImagePath width ="45" height ="90" Left ="0" Right ="45" Top="45" Bottom ="90" time ="0">Texture/Player/Mario_small_R07.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Player/Toad/Toad_GameOver.png</ImagePath>
+      </SpriteData>
+    </Type>
+    <Type characterType ="Toadette">
+      <SpriteData>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="106" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Small_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Small_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Small_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Small_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Small_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Small_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="12" Right ="78" Top="90" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="90" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Small_R06.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Big_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Big_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Big_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Big_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Big_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Big_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Big_R06.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_L00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="56" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_R00.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_L01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_R01.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Fire_L02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Fire_R02.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Fire_L03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Fire_R03.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Fire_L04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="70">Texture/Player/Toadette/Toadette_Fire_R04.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_L05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_R05.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_L06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="0">Texture/Player/Toadette/Toadette_Fire_R06.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Toadette/Toadette_Fire_L07.png</ImagePath>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="90" Top="0" Bottom ="180" time ="400">Texture/Player/Toadette/Toadette_Fire_R07.png</ImagePath>
+      </SpriteData>
+      <SpriteData>
+        <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Player/Toadette/Toadette_GameOver.png</ImagePath>
       </SpriteData>
     </Type>
   </Player>
-
+  
   <Object>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object00.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object00_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object00_1.png</ImagePath>
     </SpriteData>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object01.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object01_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object01_1.png</ImagePath>
     </SpriteData>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object02.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="10" Right ="80" Top="10" Bottom ="80" time ="0">Texture/Object/object02.png</ImagePath>
     </SpriteData>
     <SpriteData>
       <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Object/object03.png</ImagePath>
@@ -79,6 +263,13 @@
       <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="45" time ="0">Texture/Object/object06_4.png</ImagePath>
       <ImagePath width ="90" height ="90" Left ="0" Right ="68" Top="0" Bottom ="45" time ="0">Texture/Object/object06_5.png</ImagePath>
     </SpriteData>
+    <SpriteData>
+      <ImagePath width ="90" height ="900" Left ="39" Right ="50" Top="90" Bottom ="900" time ="0">Texture/Object/object07_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object07_1.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object07_2.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object07_3.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Object/object07_4.png</ImagePath>
+    </SpriteData>
   </Object>
 
   <Tile>
@@ -95,19 +286,21 @@
 
   <Item>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Item/item00.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="17" Right ="73" Top="11" Bottom ="90" time ="0">Texture/Item/item00.png</ImagePath>
     </SpriteData>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Item/item01.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Item/item01.png</ImagePath>
     </SpriteData>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Item/item02.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Item/item02.png</ImagePath>
     </SpriteData>
   </Item>
 
   <Enemy>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Enemy/enemy00.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="50" Bottom ="90" time ="600">Texture/Enemy/enemy00_0.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="50" Bottom ="90" time ="600">Texture/Enemy/enemy00_1.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="600">Texture/Enemy/enemy00_2.png</ImagePath>
     </SpriteData>
     <SpriteData>
       <ImagePath width ="90" height ="90" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/Enemy/enemy01_0.png</ImagePath>
@@ -249,6 +442,43 @@
     </ButtonData>
   </MakerSystem>
 
+  <SinglePlaySystem>
+    <BackgroundData>
+      <ImagePath width ="1100" height ="700">Texture/SinglePlay/background.png</ImagePath>
+      <ImagePath width ="4320" height ="1440">Texture/Maker/background.png</ImagePath>
+    </BackgroundData>
+    <ButtonData xPos ="20" yPos ="20" state ="0">
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Upload/button_back_on.png</ImagePath>
+      <ImagePath width ="75" height ="75" Left ="0" Right ="75" Top="0" Bottom ="75" time ="0">Texture/Upload/button_back_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="235" yPos ="160" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map00_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map00_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="816" yPos ="160" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map01_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map01_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="235" yPos ="410" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map00_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map00_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="816" yPos ="410" state ="0">
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map01_on.png</ImagePath>
+      <ImagePath width ="49" height ="56" Left ="0" Right ="49" Top="0" Bottom ="56" time ="0">Texture/Upload/button_map01_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="466" yPos ="570" state ="0">
+      <ImagePath width ="165" height ="60" Left ="0" Right ="165" Top="0" Bottom ="60" time ="0">Texture/SinglePlay/button_play_on.png</ImagePath>
+      <ImagePath width ="165" height ="60" Left ="0" Right ="165" Top="0" Bottom ="60" time ="0">Texture/SinglePlay/button_play_off.png</ImagePath>
+    </ButtonData>
+    <ButtonData xPos ="505" yPos ="305" state ="1">
+      <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/SinglePlay/button_mario.png</ImagePath>
+      <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/SinglePlay/button_luigi.png</ImagePath>
+      <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/SinglePlay/button_toad.png</ImagePath>
+      <ImagePath width ="90" height ="180" Left ="0" Right ="0" Top="0" Bottom ="0" time ="0">Texture/SinglePlay/button_toadette.png</ImagePath>
+    </ButtonData>
+  </SinglePlaySystem>
+  
   <LobbySystem>
     <BackgroundData>
       <ImagePath width ="1100" height ="700">Texture/Download/background.png</ImagePath>
@@ -329,6 +559,12 @@
       <ImagePath width ="130" height ="260" Left ="0" Right ="130" Top="0" Bottom ="260" time ="0">Texture/Room/button_1P_off.png</ImagePath>
     </ButtonData>
   </RoomSystem>
+
+  <TeamPlaySystem>
+    <BackgroundData>
+      <ImagePath width ="1100" height ="700">Texture/Maker/background.png</ImagePath>
+    </BackgroundData>
+  </TeamPlaySystem>
   
   <UploadSystem>
     <BackgroundData>

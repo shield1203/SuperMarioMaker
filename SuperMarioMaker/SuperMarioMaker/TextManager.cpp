@@ -91,6 +91,7 @@ void TextManager::LoadData(GAME_STEP gameStep)
 		break;
 	case GAME_STEP::STEP_SINGLE_PLAY:
 		m_curStepString = "SinglePlaySystem";
+
 		break;
 	case GAME_STEP::STEP_LOBBY:
 		m_curStepString = "LobbySystem";

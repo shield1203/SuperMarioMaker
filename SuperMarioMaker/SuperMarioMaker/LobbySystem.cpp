@@ -80,13 +80,13 @@ void LobbySystem::CheckPacket()
 		break;
 	case USER_LOBBY::LOBBY_CREATE_ROOM:
 		m_packetManager->m_ownerUserId = m_packetManager->m_lobbyData->ownerUserId;
-		m_resourceManager->m_curGameStep = GAME_STEP::STEP_ROOM;
+		m_resourceManager->m_curGameStep = GAME_STEP::STEP_ROOM_UPLOAD;
 		break;
 	case USER_LOBBY::LOBBY_ENTER_ROOM:
 		if (m_packetManager->m_lobbyData->bEnterRoom)
 		{
 			m_packetManager->m_ownerUserId = m_packetManager->m_lobbyData->ownerUserId;
-			m_resourceManager->m_curGameStep = GAME_STEP::STEP_ROOM;
+			m_resourceManager->m_curGameStep = GAME_STEP::STEP_ROOM_DOWNLOAD;
 		}
 		else
 		{

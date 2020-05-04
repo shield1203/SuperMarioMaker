@@ -2,6 +2,7 @@
 
 #define WIN_SIZE_WIDTH 1100
 #define WIN_SIZE_HEIGHT 700
+#define BLOCK_WIDTH 90
 #define SERVER_IP "203.232.193.170"
 #define HTTP_PORT 3000
 #define MAX_MSG_LEN 2937

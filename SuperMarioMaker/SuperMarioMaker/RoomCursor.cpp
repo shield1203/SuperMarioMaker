@@ -101,6 +101,6 @@ void RoomCursor::ButtonAct()
 	}
 	else if (m_resourceManager->m_buttonSprite[ROOM::ROOM_GAME_START_BT]->state == BUTTON_STATE::BUTTON_ON)
 	{
-		// 아직 구현ㄴㄴ
+		m_packetManager->m_gameRoomData->userReq = USER_ROOM::ROOM_GAME_START;
 	}
 }

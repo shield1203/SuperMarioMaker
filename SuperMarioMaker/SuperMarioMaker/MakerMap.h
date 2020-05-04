@@ -1,5 +1,4 @@
 #pragma once
-#define BLOCK_WIDTH 90
 
 class ResourceManager;
 
@@ -50,6 +49,7 @@ public:
 	vector<ItemData*>m_itemData;
 	vector<EnemyData*>m_enemyData;
 
+	void SetBase();
 	void SetMap(MAKER, int, int);
 	void SetObject(OBJECT, int, int);
 	void SetTile(TILE, int, int);

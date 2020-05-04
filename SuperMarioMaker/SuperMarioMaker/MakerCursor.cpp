@@ -16,6 +16,10 @@ MakerCursor::MakerCursor()
 	m_makerMap = new MakerMap();
 
 	m_state = MAKER::MAKER_MENUBAR_0;
+	
+	m_inputSystem->SetMinimum(m_xPos, m_yMinimumYPos);
+	m_inputSystem->SetMouseLocation(WIN_SIZE_WIDTH / 2, (MAX_MAP_HEIGHT - WIN_SIZE_HEIGHT) + (WIN_SIZE_HEIGHT / 2));
+	m_graphicsClass->SetCameraPosition(m_xPos, m_yPos);
 }
 
 MakerCursor::~MakerCursor()

@@ -1,12 +1,7 @@
 #pragma once
 
-class TextureShaderClass;
-class TransparentShaderClass;
-
 class SystemFrame
 {
-protected:
-	
 public:
 	virtual void Initiallize() {};
 	virtual void Update() {};

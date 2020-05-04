@@ -85,6 +85,8 @@ void ResourceManager::LoadGameData(ID3D11Device* device, GAME_STEP gameStep)
 		break;
 	case GAME_STEP::STEP_SINGLE_PLAY:
 		m_curStepString = "SinglePlaySystem";
+		LoadBackgroundData(device);
+		LoadButton(device);
 		break;
 	case GAME_STEP::STEP_LOBBY:
 		m_curStepString = "LobbySystem";
@@ -98,6 +100,12 @@ void ResourceManager::LoadGameData(ID3D11Device* device, GAME_STEP gameStep)
 		break;
 	case GAME_STEP::STEP_TEAM_PLAY:
 		m_curStepString = "TeamPlaySystem";
+		LoadBackgroundData(device);
+		LoadPlayerSprite(device);
+		LoadMapSprite(device, "Object");
+		LoadMapSprite(device, "Tile");
+		LoadMapSprite(device, "Item");
+		LoadMapSprite(device, "Enemy");
 		break;
 	case GAME_STEP::STEP_UPLOAD:
 		m_curStepString = "UploadSystem";
@@ -246,10 +254,71 @@ void ResourceManager::LoadPlayerSprite(ID3D11Device* device)
 	if (!pRoot) return;
 
 	TiXmlElement* pElem = nullptr;
-	TiXmlElement* pSubElem = nullptr;
+	TiXmlElement* pSubElem1 = nullptr;
+	TiXmlElement* pSubElem2 = nullptr;
 	TiXmlAttribute* pAttrib = nullptr;
 
 	pElem = pRoot->FirstChildElement("Player")->FirstChildElement("Type");
+	while (pElem != nullptr)
+	{
+		PlayerSprite* addPlayerSprite = new PlayerSprite;
+
+		pSubElem1 = pElem->FirstChildElement("SpriteData");
+		while (pSubElem1 != nullptr)
+		{
+			Sprite* addPlayerState = new Sprite;
+			
+			pSubElem2 = pSubElem1->FirstChildElement("ImagePath");
+			while (pSubElem2 != nullptr)
+			{
+				pAttrib = pSubElem2->FirstAttribute();
+
+				BitmapClass* addImage = new BitmapClass;
+
+				int width = pAttrib->IntValue();
+				pAttrib = pAttrib->Next();
+
+				int height = pAttrib->IntValue();
+				pAttrib = pAttrib->Next();
+
+				RECT collision;
+				collision.left = pAttrib->IntValue();
+				pAttrib = pAttrib->Next();
+
+				collision.right = pAttrib->IntValue();
+				pAttrib = pAttrib->Next();
+
+				collision.top = pAttrib->IntValue();
+				pAttrib = pAttrib->Next();
+
+				collision.bottom = pAttrib->IntValue();
+				pAttrib = pAttrib->Next();
+
+				int time = pAttrib->IntValue();
+
+				WCHAR* filename;
+				const char* str = pSubElem2->GetText();
+				int strSize = MultiByteToWideChar(CP_ACP, 0, str, -1, NULL, NULL);
+				filename = new WCHAR[strSize];
+				MultiByteToWideChar(CP_ACP, 0, str, strlen(str) + 1, filename, strSize);
+
+				addImage->Initialize(device, WIN_SIZE_WIDTH, WIN_SIZE_HEIGHT, filename, width, height, collision, time);
+				SafeDelete(filename);
+
+				addPlayerState->image.push_back(addImage);
+
+				pSubElem2 = pSubElem2->NextSiblingElement();
+			}
+
+			addPlayerSprite->state.push_back(addPlayerState);
+
+			pSubElem1 = pSubElem1->NextSiblingElement();
+		}
+
+		m_playerSprite.push_back(addPlayerSprite);
+
+		pElem = pElem->NextSiblingElement();
+	}
 }
 
 void ResourceManager::LoadMapSprite(ID3D11Device* device, string element)
@@ -350,7 +419,10 @@ void ResourceManager::ReleaseData(GAME_STEP gameStep)
 		ReleaseMapSprite();
 		break;
 	case GAME_STEP::STEP_SINGLE_PLAY:
-
+		ReleaseBackground();
+		ReleaseButton();
+		ReleasePlayer();
+		ReleaseMapSprite();
 		break;
 	case GAME_STEP::STEP_LOBBY:
 		ReleaseBackground();
@@ -361,7 +433,9 @@ void ResourceManager::ReleaseData(GAME_STEP gameStep)
 		ReleaseButton();
 		break;
 	case GAME_STEP::STEP_TEAM_PLAY:
-		
+		ReleaseBackground();
+		ReleasePlayer();
+		ReleaseMapSprite();
 		break;
 	case GAME_STEP::STEP_UPLOAD:
 		ReleaseBackground();

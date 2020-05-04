@@ -73,7 +73,7 @@ void TitleCursor::ChangeGameStep()
 				m_resourceManager->m_curGameStep = GAME_STEP::STEP_MAKER;
 				break;
 			case TITLE::TITLE_SINGLE_PLAY_BT:
-				//m_resourceManager->m_curGameStep = GAME_STEP::STEP_SINGLE_PLAY;
+				m_resourceManager->m_curGameStep = GAME_STEP::STEP_SINGLE_PLAY;
 				break;
 			case TITLE::TITLE_MULTIPLAY_BT:
 				m_resourceManager->m_curGameStep = GAME_STEP::STEP_MULTIPLAY_LOGIN;

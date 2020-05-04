@@ -41,7 +41,10 @@ void RoomSystem::Update()
 	m_socketManager->Communication();
 	CheckPacket();
 
-	m_roomCursor->Update();
+	if (m_resourceManager->m_curGameStep == GAME_STEP::STEP_ROOM)
+	{
+		m_roomCursor->Update();
+	}
 }
 
 void RoomSystem::CheckPacket()
@@ -65,7 +68,7 @@ void RoomSystem::CheckPacket()
 		{
 			if (gameRoomUser->userReq != USER_ROOM::ROOM_GAME_START)
 			{
-				bGameStart - false;
+				bGameStart = false;
 			}
 		}
 
@@ -96,26 +99,24 @@ bool RoomSystem::Render(XMMATRIX worldMatrix, XMMATRIX viewMatrix, XMMATRIX orth
 			return false;
 		}
 	}
-	
-	int count = ROOM::ROOM_1P;
+
+	auto button = m_resourceManager->m_buttonSprite[ROOM::ROOM_1P + m_packetManager->m_gameRoomData->type];
+	button->state = m_packetManager->m_gameRoomData->bReady ? BUTTON_STATE::BUTTON_ON : BUTTON_STATE::BUTTON_OFF;
+
+	if (!button->image[button->state]->Render(GraphicsClass::getInstance()->GetDeviceContext(), button->xPos, button->yPos, worldMatrix, viewMatrix, orthoMatrix))
+	{
+		return false;
+	}
+
 	for (auto roomUser : m_packetManager->m_gameRoomUserList)
 	{
-		auto button = m_resourceManager->m_buttonSprite[count];
-		if (roomUser->bReady)
-		{
-			button->state = BUTTON_STATE::BUTTON_ON;
-		}
-		else
-		{
-			button->state = BUTTON_STATE::BUTTON_OFF;
-		}
+		button = m_resourceManager->m_buttonSprite[ROOM::ROOM_1P + roomUser->type];
+		button->state = roomUser->bReady ? BUTTON_STATE::BUTTON_ON : BUTTON_STATE::BUTTON_OFF;
 
 		if (!button->image[button->state]->Render(GraphicsClass::getInstance()->GetDeviceContext(), button->xPos, button->yPos, worldMatrix, viewMatrix, orthoMatrix))
 		{
 			return false;
 		}
-
-		count++;
 	}
 
 	if (m_roomCursor->m_gameStart)

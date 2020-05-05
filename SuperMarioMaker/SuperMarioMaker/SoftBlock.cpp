@@ -6,6 +6,7 @@
 #include "ResourceManager.h"
 #include "GraphicsClass.h"
 #include "BitmapClass.h"
+#include "SoundSystem.h"
 
 SoftBlock::SoftBlock()
 {
@@ -89,6 +90,8 @@ bool SoftBlock::CheckCollision(Player* player)
 				addBlock3->yPos = m_yPos + (BLOCK_WIDTH / 2);
 				addBlock3->m_gravity = -10;
 				m_breakBlock.push_back(addBlock3);
+
+				SoundSystem::getInstance()->StartEffect(SOUND_BREAK);
 			}
 			player->SetPos(rcTemp);
 

@@ -423,6 +423,9 @@
     <ClInclude Include="Goal.h">
       <Filter>소스 파일\06.MapSystem\01.Object\07.Goal</Filter>
     </ClInclude>
+    <ClInclude Include="SoundSystem.h">
+      <Filter>소스 파일\05.Utilty\00.SoundSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainSystem.cpp">
@@ -542,9 +545,6 @@
     <ClCompile Include="SocketManager.cpp">
       <Filter>소스 파일\05.Utilty\05.SocketManager</Filter>
     </ClCompile>
-    <ClCompile Include="PacketManager.cpp">
-      <Filter>소스 파일\05.Utilty\06.PacketManager</Filter>
-    </ClCompile>
     <ClCompile Include="LobbyCursor.cpp">
       <Filter>소스 파일\04.Systems\05.MultiPlay\01.LobbySystem\00.LobbyCursor</Filter>
     </ClCompile>
@@ -622,6 +622,12 @@
     </ClCompile>
     <ClCompile Include="Goal.cpp">
       <Filter>소스 파일\06.MapSystem\01.Object\07.Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketManager.cpp">
+      <Filter>소스 파일\05.Utilty\06.PacketManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundSystem.cpp">
+      <Filter>소스 파일\05.Utilty\00.SoundSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

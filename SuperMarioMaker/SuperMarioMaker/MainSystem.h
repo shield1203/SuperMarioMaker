@@ -3,6 +3,7 @@
 class GraphicsClass;
 class SystemFrame;
 class InputSystem;
+class SoundSystem;
 class ResourceManager;
 class TextManager;
 
@@ -14,6 +15,7 @@ private:
 	GraphicsClass* m_GraphicsClass = nullptr;
 	SystemFrame* m_systemFrame = nullptr;
 	InputSystem* m_inputSystem = nullptr;
+	SoundSystem* m_soundSystem = nullptr;
 	ResourceManager* m_resourceManager = nullptr;
 	TextManager* m_textManager = nullptr;
 

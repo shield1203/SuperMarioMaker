@@ -9,6 +9,7 @@
 #include "BitmapClass.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "TextManager.h"
 #include "TextClass.h"
 
@@ -41,6 +42,9 @@ void LobbySystem::Initiallize()
 
 	m_lobbyCorsor = new LobbyCursor();
 	m_selectMapCursor = new SelectMapCursor();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(LOBBY_BGM);
 }
 
 void LobbySystem::Update()

@@ -8,6 +8,7 @@
 #include "TextManager.h"
 #include "TextClass.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 
 #include "SinglePlayCursor.h";
 #include "SingleMapSystem.h"
@@ -34,6 +35,9 @@ void SinglePlaySystem::Initiallize()
 		m_singlePlayCursor->m_mapName = 0;
 	}
 	m_mapSystem = new SingleMapSystem();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(ROOM_BGM);
 }
 
 void SinglePlaySystem::Update()
@@ -45,6 +49,9 @@ void SinglePlaySystem::Update()
 		if (m_resourceManager->m_buttonSprite[SINGLE_PLAY_CHAR]->state == BUTTON_STATE::BUTTON_OFF)
 		{
 			m_mapSystem->Initialize(m_textManager->m_textData[m_singlePlayCursor->m_mapName]->text, static_cast<PLAYER_TYPE>(m_singlePlayCursor->m_charater));
+
+			SoundSystem::getInstance()->StopBGM();
+			SoundSystem::getInstance()->StartBGM(PLAY_BGM);
 		}
 	}
 	else

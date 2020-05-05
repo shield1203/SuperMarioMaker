@@ -286,7 +286,7 @@
 
   <Item>
     <SpriteData>
-      <ImagePath width ="90" height ="90" Left ="17" Right ="73" Top="11" Bottom ="90" time ="0">Texture/Item/item00.png</ImagePath>
+      <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Item/item00.png</ImagePath>
     </SpriteData>
     <SpriteData>
       <ImagePath width ="90" height ="90" Left ="0" Right ="90" Top="0" Bottom ="90" time ="0">Texture/Item/item01.png</ImagePath>
@@ -562,7 +562,7 @@
 
   <TeamPlaySystem>
     <BackgroundData>
-      <ImagePath width ="1100" height ="700">Texture/Maker/background.png</ImagePath>
+      <ImagePath width ="4320" height ="1440">Texture/Maker/background.png</ImagePath>
     </BackgroundData>
   </TeamPlaySystem>
   

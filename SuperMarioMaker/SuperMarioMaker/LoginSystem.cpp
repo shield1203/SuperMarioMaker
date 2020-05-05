@@ -6,6 +6,7 @@
 #include "BitmapClass.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "TextManager.h"
 #include "TextClass.h"
 #include "HttpSystem.h"
@@ -52,6 +53,10 @@ void LoginSystem::Initiallize()
 
 	m_loginCursor = new LoginCursor();
 	m_nicknameTextBox = new NicknameTextBox();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(LOGIN_BGM);
+	SoundSystem::getInstance()->StartEffect(SOUND_INIT);
 }
 
 void LoginSystem::Update()

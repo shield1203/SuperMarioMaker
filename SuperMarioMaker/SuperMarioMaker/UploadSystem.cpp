@@ -6,6 +6,7 @@
 #include "BitmapClass.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "TextManager.h"
 #include "TextClass.h"
 
@@ -32,6 +33,9 @@ void UploadSystem::Initiallize()
 	{
 		m_uploadCursor->m_mapName = 0;
 	}
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(UP_DOWNLOAD_BGM);
 }
 
 void UploadSystem::Update()

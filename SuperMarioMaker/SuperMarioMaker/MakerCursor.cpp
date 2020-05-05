@@ -3,6 +3,7 @@
 #include "ResourceManager.h"
 #include "TextManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "GraphicsClass.h"
 #include "BitmapClass.h"
 #include "MakerMap.h"
@@ -24,6 +25,7 @@ MakerCursor::MakerCursor()
 
 MakerCursor::~MakerCursor()
 {
+	SafeDelete(m_makerMap);
 }
 
 void MakerCursor::Update()
@@ -38,6 +40,8 @@ void MakerCursor::Update()
 			m_click = true;
 
 			CheckCursorCollision();
+
+			SoundSystem::getInstance()->StartEffect(SOUND_BUTTON);
 		}
 
 		if (m_inputSystem->IsLeftMouseButtonDown())
@@ -54,6 +58,8 @@ void MakerCursor::Update()
 			m_click = true;
 
 			Menubar2_Button();
+
+			SoundSystem::getInstance()->StartEffect(SOUND_BUTTON);
 		}
 	}
 

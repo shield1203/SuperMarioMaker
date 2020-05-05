@@ -2,6 +2,7 @@
 #include "TitleCursor.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "BitmapClass.h"
 
 TitleCursor::TitleCursor()
@@ -25,6 +26,8 @@ void TitleCursor::Update()
 		m_click = true;
 
 		ChangeGameStep();
+
+		SoundSystem::getInstance()->StartEffect(SOUND_BUTTON);
 	}
 
 	if (!m_inputSystem->IsLeftMouseButtonDown())

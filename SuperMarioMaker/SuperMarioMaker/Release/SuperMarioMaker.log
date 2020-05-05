@@ -1,0 +1,227 @@
+﻿  BitmapClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Bridge.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  CameraClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Coin.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  DownloadCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\DownloadCursor.cpp(92,29): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  DownloadSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\DownloadSystem.cpp(59,50): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  EnemyFrame.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  FontClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  FontShaderClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\FontShaderClass.cpp(23,62): error C2664: 'bool FontShaderClass::InitializeShader(ID3D11Device *,HWND,WCHAR *,WCHAR *)': 인수 3을(를) 'const wchar_t [8]'에서 'WCHAR *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\FontShaderClass.cpp(23,40): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\FontShaderClass.h(28,7): message : 'FontShaderClass::InitializeShader' 선언을 참조하십시오.
+  Goal.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Goomba.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  happyhttp.cpp
+F:\DX\SuperMarioMaker2\SuperMarioMaker\happyhttp.cpp(216,2): error C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1400): message : '_vsnprintf' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\happyhttp.cpp(402,2): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1774): message : 'sprintf' 선언을 참조하십시오.
+  HardBlock.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  HttpSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  ItemBox.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  ItemFrame.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  LobbyCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\LobbyCursor.cpp(100,29): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  LobbySystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\LobbySystem.cpp(156,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  MakerMap.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerMap.cpp(312,26): warning C4244: '=': 'ULONGLONG'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerMap.cpp(314,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerMap.cpp(326,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerMap.cpp(339,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerMap.cpp(352,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  MakerCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerCursor.cpp(23,45): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerCursor.cpp(23,37): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerCursor.cpp(105,45): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\MakerCursor.cpp(105,37): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  컴파일하고 있습니다...
+  MakerSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Mushroom_Big.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Pipe.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  RoomMapSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  SingleMapSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  MultiPlayLoginSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Mushroom.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  NicknameTextBox.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\NicknameTextBox.cpp(28,31): warning C4244: '=': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ObjectFrame.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  PacketManager.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\PacketManager.cpp(29,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
+  Player.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\PacketManager.h(66,1): warning C4099: 'GamePlayData': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\PacketManager.h(65): message : 'GamePlayData' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(194,26): warning C4244: '=': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(253,24): warning C4244: '-=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(257,24): warning C4244: '+=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(272,19): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(282,23): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(343,62): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(343,50): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(444,27): warning C4244: '=': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(522,26): warning C4244: '=': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(534,27): warning C4244: '=': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(552,24): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Player.cpp(571,26): warning C4244: '=': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  RoomCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  RoomSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  SelectMapCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\SelectMapCursor.cpp(98,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
+  SinglePlayCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  SocketManager.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\SocketManager.cpp(49,1): error C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinSock2.h(1831): message : 'inet_addr' 선언을 참조하십시오.
+  SoftBlock.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\SoftBlock.cpp(157,32): warning C4244: '+=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\SoftBlock.cpp(161,32): warning C4244: '-=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SoundSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  TeamMapSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\PacketManager.h(66,1): warning C4099: 'GamePlayData': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\PacketManager.h(65): message : 'GamePlayData' 선언을 참조하십시오.
+  TeamPlaySystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  컴파일하고 있습니다...
+  TextClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextClass.cpp(35,5): error C2664: 'bool FontClass::Initialize(ID3D11Device *,char *,WCHAR *)': 인수 2을(를) 'const char [21]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextClass.cpp(35,36): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\FontClass.h(25,7): message : 'FontClass::Initialize' 선언을 참조하십시오.
+  TextManager.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextManager.cpp(151,39): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextManager.cpp(154,41): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextManager.cpp(157,40): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextManager.cpp(200,15): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextManager.cpp(256,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  LoginCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  LoginSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  SinglePlaySystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\SinglePlaySystem.cpp(13,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  TileFrame.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  TitleCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  D3DClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GraphicsClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  InputSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(102,26): error C2440: '초기화 중': 'const char [11]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(102,12): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(105,19): error C2440: '=': 'const char [10]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(105,8): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(108,17): error C2440: '=': 'const char [8]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(108,8): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(111,20): error C2440: '=': 'const char [11]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(111,8): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(114,13): error C2440: '=': 'const char [4]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(114,8): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(117,13): error C2440: '=': 'const char [4]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(117,8): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(120,14): error C2440: '=': 'const char [5]'에서 'char *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(120,8): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(103,1): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : 'strncpy' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(106,1): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : 'strncpy' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(109,1): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : 'strncpy' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(112,1): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : 'strncpy' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(115,1): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : 'strncpy' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(118,1): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : 'strncpy' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(121,1): error C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(338): message : 'strncpy' 선언을 참조하십시오.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\InputSystem.cpp(260,31): warning C4244: '=': 'ULONGLONG'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  ResourceManager.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\ResourceManager.cpp(58,30): warning C4316: 'BitmapClass': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+F:\DX\SuperMarioMaker2\SuperMarioMaker\ResourceManager.cpp(142,45): warning C4316: 'BitmapClass': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+F:\DX\SuperMarioMaker2\SuperMarioMaker\ResourceManager.cpp(206,46): warning C4316: 'BitmapClass': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+F:\DX\SuperMarioMaker2\SuperMarioMaker\ResourceManager.cpp(276,44): warning C4316: 'BitmapClass': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+F:\DX\SuperMarioMaker2\SuperMarioMaker\ResourceManager.cpp(346,46): warning C4316: 'BitmapClass': 힙에 할당된 개체가 16에 맞추어져 있지 않을 수도 있습니다
+  stdafx.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  SuperMarioMaker.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  SystemFrame.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  TextureClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  TextureShaderClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextureShaderClass.cpp(23,68): error C2664: 'bool TextureShaderClass::InitializeShader(ID3D11Device *,HWND,WCHAR *,WCHAR *)': 인수 3을(를) 'const wchar_t [11]'에서 'WCHAR *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TextureShaderClass.cpp(23,40): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\Textureshaderclass.h(23,7): message : 'TextureShaderClass::InitializeShader' 선언을 참조하십시오.
+  tinystr.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  컴파일하고 있습니다...
+  tinyxmlparser.cpp
+  TitleSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Torn.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  TransparentShaderClass.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TransparentShaderClass.cpp(23,76): error C2664: 'bool TransparentShaderClass::InitializeShader(ID3D11Device *,HWND,WCHAR *,WCHAR *)': 인수 3을(를) 'const wchar_t [15]'에서 'WCHAR *'(으)로 변환할 수 없습니다.
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TransparentShaderClass.cpp(23,40): message : 문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+F:\DX\SuperMarioMaker2\SuperMarioMaker\TransparentShaderClass.h(29,7): message : 'TransparentShaderClass::InitializeShader' 선언을 참조하십시오.
+  UploadCursor.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  UploadSystem.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+F:\DX\SuperMarioMaker2\SuperMarioMaker\UploadSystem.cpp(57,30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  WICTextureLoader.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800

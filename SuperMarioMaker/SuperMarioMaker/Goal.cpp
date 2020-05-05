@@ -5,6 +5,7 @@
 #include "ResourceManager.h"
 #include "GraphicsClass.h"
 #include "BitmapClass.h"
+#include "SoundSystem.h"
 
 Goal::Goal()
 {
@@ -64,6 +65,8 @@ void Goal::SetRank(PLAYER_TYPE type)
 	if (!bOverlap)
 	{
 		m_rank.push_back(type);
+
+		SoundSystem::getInstance()->StartEffect(SOUND_GOAL);
 	}
 }
 

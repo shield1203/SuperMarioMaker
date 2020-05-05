@@ -5,6 +5,7 @@
 #include "ResourceManager.h"
 #include "GraphicsClass.h"
 #include "BitmapClass.h"
+#include "SoundSystem.h"
 
 Coin::Coin()
 {
@@ -28,6 +29,8 @@ bool Coin::CheckCollision(Player* player)
 	if (IntersectRect(&rcTemp, &rcPlayer, &rcObjrct))
 	{
 		m_on = false;
+		SoundSystem::getInstance()->StartEffect(SOUND_COIN);
+
 		return true;
 	}
 	else

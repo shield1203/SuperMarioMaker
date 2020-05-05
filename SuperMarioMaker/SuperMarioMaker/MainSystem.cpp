@@ -3,6 +3,7 @@
 #include "MainSystem.h"
 
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "GraphicsClass.h"
 
 #include "SystemFrame.h"
@@ -14,6 +15,7 @@
 #include "LobbySystem.h"
 #include "RoomMapSystem.h"
 #include "RoomSystem.h"
+#include "TeamPlaySystem.h"
 #include "UploadSystem.h"
 #include "DownloadSystem.h"
 
@@ -47,6 +49,8 @@ bool MainSystem::InitializeMainSystem()
 		MessageBox(m_hwnd, L"Could not initialize the input object.", L"Error", MB_OK);
 		return false;
 	}
+
+	m_soundSystem = SoundSystem::getInstance();
 
 	m_gmaeStep = GAME_STEP::STEP_LOGIN;
 	m_resourceManager = ResourceManager::getInstance();
@@ -106,6 +110,8 @@ void MainSystem::Shutdown()
 	m_inputSystem->Shutdown();
 	SafeDelete(m_inputSystem);
 
+	SafeDelete(m_soundSystem);
+
 	SafeDelete(m_textManager);
 
 	ShutdownWindows();
@@ -147,6 +153,9 @@ void MainSystem::Initialize()
 		case GAME_STEP::STEP_ROOM:
 			m_systemFrame = new RoomSystem();
 			break;
+		case GAME_STEP::STEP_TEAM_PLAY:
+			m_systemFrame = new TeamPlaySystem();
+			break;
 		case GAME_STEP::STEP_UPLOAD:
 			m_systemFrame = new UploadSystem();
 			break;
@@ -162,6 +171,7 @@ void MainSystem::Initialize()
 void MainSystem::Update()
 {
 	m_inputSystem->Update();
+	m_soundSystem->pSystem->update();
 	m_systemFrame->Update();
 }
 

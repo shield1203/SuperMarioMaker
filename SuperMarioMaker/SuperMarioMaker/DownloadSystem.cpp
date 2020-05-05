@@ -6,6 +6,7 @@
 #include "BitmapClass.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "TextManager.h"
 #include "TextClass.h"
 #include "HttpSystem.h"
@@ -32,6 +33,9 @@ void DownloadSystem::Initiallize()
 	m_textManager->LoadData(GAME_STEP::STEP_DOWNLOAD);
 
 	m_downloadCursor = new DownloadCursor();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(UP_DOWNLOAD_BGM);
 }
 
 void DownloadSystem::Update()

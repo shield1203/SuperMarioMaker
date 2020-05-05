@@ -189,7 +189,10 @@ void SingleMapSystem::CheckCollision()
 
 		for (auto object : m_objects)
 		{
-			collision = object->CheckCollision(item);
+			if (object->CheckCollision(item))
+			{
+				collision = true;
+			}
 		}
 
 		if (!collision)

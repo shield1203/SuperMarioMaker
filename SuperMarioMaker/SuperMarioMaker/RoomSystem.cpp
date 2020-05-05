@@ -9,6 +9,7 @@
 #include "BitmapClass.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 
 #include "RoomCursor.h"
 
@@ -33,7 +34,13 @@ void RoomSystem::Initiallize()
 	m_resourceManager = ResourceManager::getInstance();
 	m_resourceManager->LoadGameData(GraphicsClass::getInstance()->GetDevice(), GAME_STEP::STEP_ROOM);
 
+	InputSystem::getInstance()->SetMinimum(0, 0);
+	GraphicsClass::getInstance()->SetCameraPosition(0, 0);
+
 	m_roomCursor = new RoomCursor();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(ROOM_BGM);
 }
 
 void RoomSystem::Update()

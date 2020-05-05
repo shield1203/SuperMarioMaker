@@ -18,7 +18,7 @@
 #pragma comment(lib, "dxguid.lib")
 #pragma comment(lib, "d3dcompiler.lib")
 #pragma comment(lib, "ws2_32")
-
+#pragma comment(lib, "fmod_vc.lib")
 
 /////////////////
 // DX INCLUDES //
@@ -40,6 +40,13 @@ using namespace DirectX;
 #include<list>
 #include<ctime>
 using namespace std;
+
+///////////////
+//   SOUND   //
+///////////////
+#include"inc/fmod.hpp"
+
+using namespace FMOD;
 
 ///////////////////////////
 //  warning C4316 Ã³¸®¿ë  //

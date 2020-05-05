@@ -2,6 +2,7 @@
 #include "Player.h"
 
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "ResourceManager.h"
 #include "GraphicsClass.h"
 #include "BitmapClass.h"
@@ -123,6 +124,8 @@ void Player::Action_Idle()
 		m_act = PLAYER_ACT::ACT_JUMP;
 		m_jumpForce = JUMP_VALUE;
 		m_jump = true;
+
+		SoundSystem::getInstance()->StartEffect(SOUND_JUMP);
 	}
 	else if (m_inputSystem->IsDownArrowPressed())
 	{
@@ -154,6 +157,7 @@ void Player::Action_Run()
 		m_jumpForce = JUMP_VALUE;
 		m_jump = true;
 
+		SoundSystem::getInstance()->StartEffect(SOUND_JUMP);
 		return;
 	}
 
@@ -201,6 +205,7 @@ void Player::Action_Stop()
 		m_jumpForce = JUMP_VALUE;
 		m_jump = true;
 
+		SoundSystem::getInstance()->StartEffect(SOUND_JUMP);
 		return;
 	}
 
@@ -389,6 +394,8 @@ void Player::SetPos(RECT rcCollision)
 		break;
 	case DIRECTION::DOWN:
 		m_jumpForce = 5;
+
+		SoundSystem::getInstance()->StartEffect(SOUND_BUMP);
 		break;
 	case DIRECTION::RIGHT:
 		if (m_yPos != rcCollision.top - 179)
@@ -424,6 +431,8 @@ void Player::SetState(PLAYER_STATE state)
 			m_state = state;
 			m_changeCount = 0;
 			m_imageCount = 0;
+
+			SoundSystem::getInstance()->StartEffect(SOUND_POWER_UP);
 		}
 		break;
 	case PLAYER_STATE::STATE_DIE:
@@ -433,6 +442,8 @@ void Player::SetState(PLAYER_STATE state)
 			m_act = PLAYER_ACT::ACT_SIT;
 			m_direction = DIRECTION::LEFT;
 			m_time = GetTickCount64();
+
+			SoundSystem::getInstance()->StartEffect(SOUND_DIE);
 		}
 		else if(!m_respawn)
 		{
@@ -442,6 +453,8 @@ void Player::SetState(PLAYER_STATE state)
 			m_state = PLAYER_STATE::STATE_SMALL;
 			m_changeCount = 0;
 			m_imageCount = 0;
+
+			SoundSystem::getInstance()->StartEffect(SOUND_POWER_DOWN);
 		}
 		break;
 	}

@@ -4,6 +4,7 @@
 #include "PacketManager.h"
 #include "TextManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "BitmapClass.h"
 
 SelectMapCursor::SelectMapCursor()
@@ -30,6 +31,8 @@ void SelectMapCursor::Update()
 	{
 		m_click = true;
 		ButtonAct();
+
+		SoundSystem::getInstance()->StartEffect(SOUND_BUTTON);
 	}
 
 	if (!m_inputSystem->IsLeftMouseButtonDown())

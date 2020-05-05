@@ -5,6 +5,7 @@
 #include "TextManager.h"
 #include "TextClass.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "BitmapClass.h"
 #include "HttpSystem.h"
 
@@ -110,5 +111,7 @@ void LoginCursor::ChangeGameStep()
 	if (m_resourceManager->m_buttonSprite[LOGIN::LOGIN_GAME_START_BT]->state == BUTTON_STATE::BUTTON_ON)
 	{
 		m_resourceManager->m_curGameStep = GAME_STEP::STEP_TITLE;
+
+		SoundSystem::getInstance()->StartEffect(SOUND_LOGIN_BUTTON);
 	}
 }

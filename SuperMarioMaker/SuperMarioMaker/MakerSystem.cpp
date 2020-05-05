@@ -6,6 +6,7 @@
 #include "BitmapClass.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "TextManager.h"
 #include "TextClass.h"
 
@@ -31,6 +32,9 @@ void MakerSystem::Initiallize()
 
 	m_makerCursor = new MakerCursor();
 	m_mapNameTextBox = new NicknameTextBox();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(MAKER_BGM);
 }
 
 void MakerSystem::Update()

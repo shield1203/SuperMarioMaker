@@ -7,6 +7,7 @@
 #include "GraphicsClass.h"
 #include "BitmapClass.h"
 #include "ResourceManager.h"
+#include "SoundSystem.h"
 
 #include "TeamMapSystem.h"
 
@@ -29,6 +30,10 @@ void TeamPlaySystem::Initiallize()
 	m_resourceManager->LoadGameData(GraphicsClass::getInstance()->GetDevice(), GAME_STEP::STEP_TEAM_PLAY);
 
 	m_mapSystem = new TeamMapSystem();
+	m_mapSystem->Initialize();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(PLAY_BGM);
 }
 
 
@@ -50,7 +55,7 @@ void TeamPlaySystem::CheckPacket()
 {
 	if (m_socketManager->m_userState == USER_STATE::CLOSE_CONNECT)
 	{
-		m_packetManager->m_gameRoomData->userReq = USER_ROOM::ROOM_BACK_TITLE;
+		m_packetManager->m_gamePlayData->userReq = USER_PLAY::PLAY_BACK_TITLE;
 	}
 
 	switch (m_packetManager->m_gamePlayData->userReq)

@@ -74,7 +74,7 @@ void PacketManager::ClearGameMapData()
 
 void PacketManager::ClearGamePlayUserList()
 {
-	for (auto user : m_gameRoomUserList)
+	for (auto user : m_gamePlayUserList)
 	{
 		SafeDelete(user);
 	}
@@ -135,7 +135,7 @@ void PacketManager::SetGameMapData()
 
 	for (auto mapData : m_gameMapData)
 	{
-		memcpy(m_packetData->data, mapData, sizeof(GameMapData));
+		memcpy(m_packetData->data + m_packetData->size, mapData, sizeof(GameMapData));
 		m_packetData->size += static_cast<unsigned short>(sizeof(GameMapData));
 	}
 }
@@ -180,7 +180,6 @@ void PacketManager::GetLobbyData()
 	int size = sizeof(LobbyData);
 
 	ClearLobbyRoomList();
-
 	while (size < m_packetData->size)
 	{
 		LobbyData_GameRoom* room = new LobbyData_GameRoom;
@@ -212,7 +211,7 @@ void PacketManager::GetGameRoomData()
 void PacketManager::GetGameMapData()
 {
 	int size = 0;
-
+	
 	ClearGameMapData();
 	while (size < m_packetData->size)
 	{

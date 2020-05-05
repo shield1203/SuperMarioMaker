@@ -323,7 +323,7 @@ void MakerMap::EraseObject(int column, int row)
 
 		if (m_itemData.size() > 1)
 		{
-			for (int i = 0; i < m_objectData.size(); i++)
+			for (int i = 0; i < m_itemData.size(); i++)
 			{
 				if (column == m_itemData[i]->column && row == m_itemData[i]->row)
 				{

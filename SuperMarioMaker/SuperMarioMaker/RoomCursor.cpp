@@ -3,6 +3,7 @@
 #include "ResourceManager.h"
 #include "PacketManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "BitmapClass.h"
 
 RoomCursor::RoomCursor()
@@ -18,7 +19,7 @@ RoomCursor::~RoomCursor()
 
 void RoomCursor::Update()
 {
-	if (m_packetManager->m_userId == m_packetManager->m_ownerUserId && m_packetManager->m_gameRoomUserList.size() > 1)
+	if (m_packetManager->m_userId == m_packetManager->m_ownerUserId && !m_packetManager->m_gameRoomUserList.empty())
 	{
 		CheckReadyPlayer();
 	}
@@ -30,6 +31,8 @@ void RoomCursor::Update()
 		m_click = true;
 
 		ButtonAct();
+
+		SoundSystem::getInstance()->StartEffect(SOUND_BUTTON);
 	}
 
 	if (!m_inputSystem->IsLeftMouseButtonDown())

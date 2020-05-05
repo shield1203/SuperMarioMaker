@@ -185,7 +185,9 @@ void TeamMapSystem::SetUserData()
 			}
 		}
 
-		if (userConnect)
+		user++;
+
+		/*if (userConnect)
 		{
 			user++;
 		}
@@ -193,7 +195,7 @@ void TeamMapSystem::SetUserData()
 		{
 			SafeDelete(*user);
 			user = m_users.erase(user++);
-		}
+		}*/
 	}
 }
 
@@ -233,7 +235,10 @@ void TeamMapSystem::CheckCollision()
 
 		for (auto object : m_objects)
 		{
-			collision = object->CheckCollision(item);
+			if (object->CheckCollision(item))
+			{
+				collision = true;
+			}
 		}
 
 		if (!collision)

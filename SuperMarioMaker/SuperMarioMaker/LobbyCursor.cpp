@@ -4,6 +4,7 @@
 #include "PacketManager.h"
 #include "TextManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "BitmapClass.h"
 
 LobbyCursor::LobbyCursor()
@@ -39,6 +40,8 @@ void LobbyCursor::Update()
 		{
 			m_click = true;
 			ButtonAct();
+
+			SoundSystem::getInstance()->StartEffect(SOUND_BUTTON);
 		}
 	}
 

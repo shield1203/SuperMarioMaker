@@ -2,6 +2,7 @@
 #include "DownloadCursor.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 #include "BitmapClass.h"
 #include "TextManager.h"
 #include "HttpSystem.h"
@@ -45,6 +46,8 @@ void DownloadCursor::Update()
 			m_click = true;
 
 			ButtonAct();
+
+			SoundSystem::getInstance()->StartEffect(SOUND_BUTTON);
 		}
 
 		if (!m_inputSystem->IsLeftMouseButtonDown())

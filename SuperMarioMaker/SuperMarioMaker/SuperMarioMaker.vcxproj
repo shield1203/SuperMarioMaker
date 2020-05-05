@@ -185,6 +185,7 @@
     <ClInclude Include="SinglePlayCursor.h" />
     <ClInclude Include="SocketManager.h" />
     <ClInclude Include="SoftBlock.h" />
+    <ClInclude Include="SoundSystem.h" />
     <ClInclude Include="TeamMapSystem.h" />
     <ClInclude Include="TeamPlaySystem.h" />
     <ClInclude Include="TextClass.h" />
@@ -256,6 +257,7 @@
     <ClCompile Include="SinglePlayCursor.cpp" />
     <ClCompile Include="SocketManager.cpp" />
     <ClCompile Include="SoftBlock.cpp" />
+    <ClCompile Include="SoundSystem.cpp" />
     <ClCompile Include="TeamMapSystem.cpp" />
     <ClCompile Include="TeamPlaySystem.cpp" />
     <ClCompile Include="TextClass.cpp" />

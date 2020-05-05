@@ -6,6 +6,7 @@
 #include "BitmapClass.h"
 #include "ResourceManager.h"
 #include "InputSystem.h"
+#include "SoundSystem.h"
 
 #include "TitleCursor.h"
 
@@ -25,6 +26,9 @@ void TitleSystem::Initiallize()
 	GraphicsClass::getInstance()->SetCameraPosition(0, 0);
 
 	m_titleCursor = new TitleCursor();
+
+	SoundSystem::getInstance()->StopBGM();
+	SoundSystem::getInstance()->StartBGM(TITLE_BGM);
 }
 
 void TitleSystem::Update()

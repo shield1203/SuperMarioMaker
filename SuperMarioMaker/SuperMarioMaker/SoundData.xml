@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<Sound>
+  <BGM count="7">
+    <SoundPath>Sound\\Login_BGM.mp3</SoundPath>
+    <SoundPath>Sound\\Title_BGM.mp3</SoundPath>
+    <SoundPath>Sound\\Maker_BGM.mp3</SoundPath>
+    <SoundPath>Sound\\Play_BGM.mp3</SoundPath>
+    <SoundPath>Sound\\Lobby_BGM.mp3</SoundPath>
+    <SoundPath>Sound\\Room_BGM.mp3</SoundPath>
+    <SoundPath>Sound\\UpDownload_BGM.mp3</SoundPath>
+  </BGM>
+  
+  <Effect count="11">
+    <SoundPath>Sound\\Init.wav</SoundPath>
+    <SoundPath>Sound\\Login_button.wav</SoundPath>
+    <SoundPath>Sound\\Button.wav</SoundPath>
+    <SoundPath>Sound\\Jump.wav</SoundPath>
+    <SoundPath>Sound\\PowerDown.wav</SoundPath>
+    <SoundPath>Sound\\PowerUp.wav</SoundPath>
+    <SoundPath>Sound\\Die.wav</SoundPath>
+    <SoundPath>Sound\\Coin.wav</SoundPath>
+    <SoundPath>Sound\\Break.wav</SoundPath>
+    <SoundPath>Sound\\Bump.wav</SoundPath>
+    <SoundPath>Sound\\Goal.wav</SoundPath>
+  </Effect>
+</Sound>

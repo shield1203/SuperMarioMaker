@@ -56,7 +56,14 @@ void RoomCursor::CheckReadyPlayer()
 		}
 	}
 
-	m_gameStart = allReady;
+	if (allReady && m_ready)
+	{
+		m_gameStart = true;
+	}
+	else
+	{
+		m_gameStart = false;
+	}
 }
 
 void RoomCursor::CheckCursorLocation()
